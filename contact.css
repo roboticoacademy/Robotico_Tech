@@ -1,0 +1,215 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background: #004aad;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 50px;
+}
+
+.site-name {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover, nav a.active {
+  color: #ff8c00;
+}
+
+.menu-toggle {
+  display: none;
+  color: white;
+  font-size: 1.8em;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #004aad;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+}
+
+
+/*search */
+.search-wrapper input {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  width: 160px;
+}
+
+/* for mobile */
+.menu-toggle {
+  display: none;
+  font-size: 1.8em;
+  cursor: pointer;
+  color: white;
+}
+
+
+
+
+/* ================== FOOTER ================== */
+footer {
+  background: linear-gradient(90deg, #0056b3, #ff6600);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-logo img {
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.footer-logo h2 {
+  font-size: 24px;
+}
+
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* يخلي الكل يبدأ من نفس الخط */
+  gap: 8px; /* مسافة متساوية بين كل لينك */
+}
+
+.footer-links a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  transition: color 0.3s;
+  padding-left: 2px; /* يخليهم كلهم بنفس البداية */
+}
+
+.footer-links a i {
+  margin-right: 8px;
+  width: 20px; /* يضمن إن الأيقونات تاخد نفس العرض */
+  text-align: center;
+}
+
+
+.footer-links a:hover {
+  color: #ffd9b3;
+}
+
+.footer-social a {
+  color: white;
+  font-size: 24px;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+.footer-social a:hover {
+  color: #ffd9b3;
+}
+
+footer hr {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid #ffffff44;
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #004aad;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    gap: 20px;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+
+  .about {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+ 
+
+
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

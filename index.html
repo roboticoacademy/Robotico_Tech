@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Robotico Tech</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 🔵 Navbar -->
+  <header class="navbar">
+    <div class="logo-area">
+      <img src="images/logo.png" alt="Robotico Logo" class="logo" />
+      <span class="site-name">Robotico Tech</span>
+    </div>
+ 
+    <!-- القائمة المتجاوبة -->
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="index.html"  class="active"><i class="fas fa-home"></i><strong> Home</strong></a></li>
+        <li><a href="aboutus.html"><i class="fas fa-info-circle"></i><strong> About</strong></a></li>
+        <li><a href="courses.html"><i class="fas fa-robot"></i><strong> Courses</strong></a></li>
+        <li><a href="competitions.html"><i class="fas fa-trophy"></i><strong> Competitions</strong></a></li>
+        <li><a href="videos.html"><i class="fas fa-video"></i><strong> Videos</strong></a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i><strong> Contact</strong></a></li>
+      </ul>
+    </nav>
+
+  
+  </header>
+
+  <!-- 🧡 Hero Section -->
+  <section class="hero">
+    <img src="images/cover.jpg" alt="Robotico Academy cover" class="cover" />
+    <div class="hero-text">
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+      <p>Empowering kids to build the future — one robot at a time.</p>
+    <div style="text-align:center; margin:30px 0;">
+  <button class="explore-btn" onclick="location.href='courses.html'">
+    <strong>Explore Courses</strong>
+  </button>
+</div>
+
+    </div>
+  </section>
+
+  <!-- 💬 About Section -->
+  <section id="about" class="about">
+    <div class="about-text">
+      <h2>Robotico Tech</h2>
+      <p>
+        At <b>Robotico Academy</b>, we make learning <b>programming</b> and <b>robotics</b> fun, interactive, and creative for kids.
+        Our hands-on courses, workshops, and competitions inspire children to explore technology, build robots, and develop problem-solving skills,
+        turning every child into a confident innovator ready for the future.
+      </p>
+      <div class="about-cards">
+        <div class="card mission">
+          <h3>Our Mission</h3>
+          <p>To empower the next generation with coding, creativity, and problem-solving skills through robotics and technology.</p>
+        </div>
+        <div class="card vision">
+          <h3>Our Vision</h3>
+          <p>To become the top academy in the Arab world that builds future innovators capable of changing the world with technology.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- السلايدر -->
+    <div class="about-slider">
+      <img src="images/adam.jpg" alt="Robotico Academy" class="slide active" />
+      <img src="images/kids_coding2.jpg" alt="Robotico Academy" class="slide" />
+      <img src="images/kids_coding3.jpg" alt="Robotico Academy" class="slide" />
+    </div>
+  </section>
+
+  <!-- 🎓 Courses Section -->
+  <section id="courses" class="courses">
+    <h2>Our Courses</h2>
+    <div class="course-list">
+      <article class="course-card">
+        <img src="images/course1.jpg" alt="Introduction to Coding with Scratch" />
+        <h3>Introduction to Programming with Python</h3>
+        <p>Learn the fundamentals of programming using Python through fun and practical projects.</p>
+        <button>Learn More</button>
+      </article>
+
+      <article class="course-card">
+        <img src="images/course2.png" alt="Robotics with LEGO Spike Prime" />
+        <h3>Web Development</h3>
+        <p>Build your own websites by learning HTML, CSS, and JavaScript in an interactive way.</p>
+        <button>Learn More</button>
+      </article>
+
+      <article class="course-card">
+        <img src="images/course3.jpg" alt="AI for Kids – Smart Projects" />
+        <h3>Robotics</h3>
+        <p>Combine programming and robotics to create exciting projects and explore technology creatively.</p>
+        <button>Learn More</button>
+      </article>
+    </div>
+  </section>
+
+  <!-- 🏆 Competitions Section -->
+  <section id="competitions" class="competitions">
+    <h2>Competitions & Achievements</h2>
+    <div class="videos">
+      <video src="videos/competition1.mp4" controls></video>
+      <video src="videos/competition2.mp4" controls></video>
+    </div>
+  </section>
+
+  <!-- 📞 Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="images/logo.png" alt="Robotico Logo" />
+        <h2>Robotico Tech</h2>
+        <p>Empowering kids to learn coding & robotics creatively.</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <a href="courses.html"> <i class="fas fa-robot"></i>        Courses</a>
+          <a href="competitions.html">  <i class="fas fa-trophy"></i>Competitions</a>
+        <a href="videos.html"><i class="fas fa-video"></i>        Videos</a>
+        <a href="aboutus.html"><i class="fas fa-info-circle"></i> About</a>
+        <a href="contact.html"><i class="fas fa-envelope"></i>    Contact</a>
+      </div>
+
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <a href="https://www.facebook.com/RoboticoAcademy" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <hr />
+    <p>© 2025 Robotico Tech. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

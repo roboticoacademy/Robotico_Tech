@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join Robotico Tech</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="join.css" />
+</head>
+<body>
+
+    <!-- 🔵 NAVBAR -->
+  <header class="navbar">
+    <div class="logo-area">
+      <img src="images/logo.png" alt="Robotico Logo" class="logo" />
+      <span class="site-name">Robotico Tech</span>
+    </div>
+
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="aboutus.html"><i class="fas fa-info-circle"></i> About</a></li>
+        <li><a href="courses.html" class="active"><i class="fas fa-robot"></i> Courses</a></li>
+        <li><a href="competitions.html"><i class="fas fa-trophy"></i> Competitions</a></li>
+        <li><a href="videos.html"><i class="fas fa-video"></i> Videos</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<!-- 🌟 JOIN SECTION -->
+  <section class="join-section"> 
+    <h2>Join <span>Robotico Academy</span></h2> 
+    <p>Fill in your details and start your learning journey with us 🚀</p> 
+    <button id="openFormBtn" class="join-btn">Join Now</button>
+  </section>
+
+<!-- 📊 STATS COUNTER SECTION -->
+<section class="stats-section">
+  <div class="stat-box">
+    <i class="fas fa-user-graduate"></i>
+    <h3 class="counter" data-target="2000">0</h3>
+    <p>Students</p>
+  </div>
+
+  <div class="stat-box">
+    <i class="fas fa-book-open"></i>
+    <h3 class="counter" data-target="15">0</h3>
+    <p>Courses</p>
+  </div>
+
+  <div class="stat-box">
+    <i class="fas fa-users"></i>
+    <h3 class="counter" data-target="10">0</h3>
+    <p>Countries Taught</p>
+  </div>
+
+  <div class="stat-box">
+    <i class="fas fa-trophy"></i>
+    <h3 class="counter" data-target="20">0</h3>
+    <p>Competitions</p>
+  </div>
+</section>
+
+
+
+  <!-- 💬 POPUP FORM -->
+  <div class="popup" id="popupForm">
+    <div class="popup-content">
+      <span class="close-btn" id="closeFormBtn">&times;</span>
+      <h3>Join Us Form</h3>
+      <form id="joinForm">
+        <label>Student Full Name</label>
+        <input type="text" name="name" placeholder="Enter your name" required>
+
+        <label>Age</label>
+        <input type="number" name="age" placeholder="Enter your age" required>
+
+        <label>Course</label>
+        <select name="course" required>
+          <option value="">-- Choose a course --</option>
+          <option>Scratch</option>
+          <option>Mobile Application</option>
+          <option>Web Development</option>
+          <option>LEGO Essential</option>
+          <option>LEGO Prime</option>
+          <option>Python</option>
+          <option>AI & Machine Learning</option>
+          <option>3D Printing</option>
+        </select>
+
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Enter your email" required>
+
+        <label>Phone</label>
+        <input type="text" name="phone" placeholder="Enter your phone number" required>
+
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 🧡 FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="images/logo.png" alt="Robotico Logo" />
+        <h2>Robotico Tech</h2>
+        <p>Empowering kids to learn coding & robotics creatively.</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <a href="courses.html"><i class="fas fa-robot"></i> Courses</a>
+        <a href="competitions.html"><i class="fas fa-trophy"></i> Competitions</a>
+        <a href="videos.html"><i class="fas fa-video"></i> Videos</a>
+        <a href="aboutus.html"><i class="fas fa-info-circle"></i> About</a>
+        <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+      </div>
+
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <a href="https://facebook.com/RoboticoAcademy" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <hr />
+    <p>© 2025 Robotico Tech. All Rights Reserved.</p>
+  </footer>
+<script src="joinus.js"></script>
+</body>
+</html>

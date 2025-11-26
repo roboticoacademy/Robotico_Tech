@@ -1,0 +1,440 @@
+/* ====== BODY ====== */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #e6f0ff;
+}
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background: #004aad;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 50px;
+}
+
+.site-name {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover, nav a.active {
+  color: #ff8c00;
+}
+
+.menu-toggle {
+  display: none;
+  color: white;
+  font-size: 1.8em;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #004aad;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+}
+
+/* ====== COMP CARDS ====== */
+.competitions-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px;
+  justify-content: center;
+}
+.comp-card {
+  background: linear-gradient(135deg, #007BFF, #ff8c00);
+  color: white;
+  flex: 1 1 calc(25% - 20px);
+  min-width: 220px;
+  border-radius: 20px;
+  padding: 25px 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.3s;
+}
+.comp-card i {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+.comp-card h3 {
+  margin: 10px 0;
+}
+.comp-card:hover {
+  transform: translateY(-8px);
+}
+.learn-btn {
+  margin-top: 15px;
+  display: inline-block;
+  background-color: white;
+  color: #007BFF;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.learn-btn:hover {
+  background-color: #ff8c00;
+  color: white;
+}
+
+/* ====== SIDE SLIDER ====== */
+body {
+  background-color: #f4f6fb; /* Background for the page */
+  font-family: 'Poppins', sans-serif;
+}
+
+/* SLIDER STYLE */
+.slider-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100%;
+background: linear-gradient(135deg, #0066ff, #ff8c00);
+  box-shadow: -5px 0 20px rgba(0,0,0,0.2);
+  border-radius: 15px 0 0 15px;
+  color: white;
+  padding: 30px 20px;
+  transition: transform 0.5s ease-in-out;
+  z-index: 1000;
+  overflow-y: auto;
+  transform: translateX(100%); /* مخفي تمامًا */
+}
+
+.slider-container.active {
+  transform: translateX(0); /* يظهر */
+}
+
+
+.slider-close {
+  font-size: 1.5em;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  transition: transform 0.3s;
+}
+
+.slider-close:hover {
+  transform: rotate(90deg);
+}
+
+.slider-content h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  background: linear-gradient(90deg, #ff8c00, #004aad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.slider-content p {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  animation: fadeIn 0.8s ease forwards;
+}
+/* محتوى الـ slider */
+.slider-content {
+  padding: 20px;        /* مساحة حول المحتوى */
+  max-height: 80vh;     /* يمنع الـ slider من الخروج عن الشاشة */
+  overflow-y: auto;     /* يسمح بالتمرير لو المحتوى طويل */
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;    /* مسافة بين الأسطر */
+  color:wheat;
+}
+
+/* العناوين */
+.slider-content strong {
+  display: block;
+  margin-top: 20px;
+  font-size: 1.1em;
+  color: #004aad;
+}
+
+/* القوائم */
+.slider-content ul {
+  margin: 10px 0 20px 20px; /* مسافة حول القائمة */
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+
+
+.slider-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.slider-images img {
+  width: 48%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.slider-images img:hover {
+  transform: scale(1.05);
+}
+
+/* Fade in text */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+
+/* ====== PHOTOS SLIDER ====== */
+.photos-slider-container {
+  position: relative;
+  margin: 50px 0;
+  overflow: hidden;
+}
+.photos-slider {
+  display: flex;
+  gap: 15px;
+  padding: 20px;
+  animation: scroll 25s linear infinite;
+}
+.photos-slider img {
+  min-width: 250px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+.photos-slider img:hover {
+  transform: scale(1.05);
+}
+@keyframes scroll {
+  0% {transform: translateX(0);}
+  100% {transform: translateX(-50%);}
+}
+
+/* ====== VIDEOS GRID ====== */
+/* ====== VIDEOS GRID ====== */
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 فيديوهات بالصف */
+  gap: 25px;
+  padding: 40px 20px;
+  justify-items: center;
+}
+
+.videos-grid video {
+  width: 100%;
+  height: 200px; /* طول ثابت لجميع الفيديوهات */
+  object-fit: cover; /* يضمن أن الفيديوهات كلها بنفس الأبعاد بدون تشويه */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.videos-grid video:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+/* ====== RESPONSIVE ====== */
+@media(max-width:1024px) {
+  .videos-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 فيديوهات في الصف على الشاشات المتوسطة */
+  }
+}
+
+@media(max-width:600px) {
+  .videos-grid {
+    grid-template-columns: 1fr; /* فيديو واحد في الصف على الموبايل */
+  }
+  .videos-grid video {
+    height: 180px; /* حجم أصغر على الموبايل */
+  }
+}
+
+
+/* ====== RESPONSIVE ====== */
+@media(max-width:1024px) {
+  .comp-card { flex: 1 1 calc(50% - 20px);}
+  .slider-container { width: 80%; }
+}
+@media(max-width:600px) {
+  .comp-card { flex: 1 1 100%; }
+}
+/* ================== FOOTER ================== */
+footer {
+  background: linear-gradient(90deg, #0056b3, #ff6600);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-logo img {
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.footer-logo h2 {
+  font-size: 24px;
+}
+
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* يخلي الكل يبدأ من نفس الخط */
+  gap: 8px; /* مسافة متساوية بين كل لينك */
+}
+
+.footer-links a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  transition: color 0.3s;
+  padding-left: 2px; /* يخليهم كلهم بنفس البداية */
+}
+
+.footer-links a i {
+  margin-right: 8px;
+  width: 20px; /* يضمن إن الأيقونات تاخد نفس العرض */
+  text-align: center;
+}
+
+
+.footer-links a:hover {
+  color: #ffd9b3;
+}
+
+.footer-social a {
+  color: white;
+  font-size: 24px;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+.footer-social a:hover {
+  color: #ffd9b3;
+}
+
+footer hr {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid #ffffff44;
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #004aad;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    gap: 20px;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .search-wrapper {
+    display: none;
+  }
+
+  .about {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .videos video {
+    width: 100%;
+  }
+
+  .course-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

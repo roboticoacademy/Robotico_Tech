@@ -1,0 +1,428 @@
+/* ================== RESET ================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f9fafb;
+  color: #333;
+  line-height: 1.6;
+  text-align: center; /* يجعل كل النصوص مركزيه بشكل عام */
+ 
+}
+
+/* ================== NAVBAR ================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #004aad;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 50px;
+}
+
+.site-name {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover, nav a.active {
+  color: #ff8c00;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8em;
+  cursor: pointer;
+  color: white;
+}
+
+/* ================== HERO ================== */
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.hero .cover {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+ 
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+ 
+}
+
+.hero-text h1 {
+  font-size: 2.8em;
+  margin-bottom: 15px;
+  font-family: "shojumaru";
+}
+
+.hero-text p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.explore-btn {
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #007BFF, #ff8c00); 
+  color: white;
+  font-size: 1.1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.explore-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+/* ================== ABOUT ================== */
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 60px 40px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-text h2 {
+  color: #004aad;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+}
+
+.about-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about-cards .card {
+  flex: 1;
+  min-width: 230px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+  /* إضافة لضبط اتجاه النص */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* يضمن النص يظهر من فوق */
+  align-items: flex-start;     /* يحافظ على محاذاة النص لليسار داخل الكارد */
+}
+
+.about-cards .mission h3 {
+  color: #004aad;
+  font-weight: bold;
+}
+
+.about-cards .vision h3 {
+  color: #004aad;
+}
+
+/* السلايدر */
+.about-slider {
+  flex: 1;
+  max-width: 450px;
+  height: 500px; 
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.about-slider img {
+  width: 100%;
+  height: 100%; 
+  object-fit: cover; 
+  display: none;
+}
+
+.about-slider img.active {
+  display: block;
+}
+
+/* ================== COURSES ================== */
+.courses {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.courses h2 {
+  color: #004aad;
+  margin-bottom: 30px;
+}
+
+.course-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.course-card {
+  width: 300px;
+  background-color: #f9fafb;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: 0.3s;
+}
+
+.course-card:hover {
+  transform: scale(1.05);
+}
+
+.course-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.course-card h3 {
+  margin: 15px 0 10px;
+  color: #ff8c00;
+}
+
+.course-card button {
+  background-color: #004aad;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.course-card button:hover {
+  background-color: #003a87;
+}
+
+/* ================== COMPETITIONS ================== */
+.competitions {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f0f6ff;
+}
+
+.competitions h2 {
+  color: #004aad;
+  margin-bottom: 30px;
+}
+
+.videos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.videos video {
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ================== FOOTER ================== */
+footer {
+  background: linear-gradient(90deg, #0056b3, #ff6600);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-logo img {
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.footer-logo h2 {
+  font-size: 24px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.footer-links a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.footer-links a i {
+  margin-right: 8px;
+  width: 20px;
+  text-align: center;
+}
+
+.footer-links a:hover {
+  color: #ffd9b3;
+}
+
+.footer-social a {
+  color: white;
+  font-size: 24px;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+.footer-social a:hover {
+  color: #ffd9b3;
+}
+
+footer hr {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid #ffffff44;
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 1024px) {
+  .about-slider {
+    max-width: 100%;
+    height: 400px;
+  }
+}
+
+@media (max-width: 900px) {
+  .about-cards {
+    flex-direction: column;
+  }
+  .course-list {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #004aad;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    gap: 20px;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .about {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .videos video {
+    width: 100%;
+  }
+
+  .course-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-text h1 {
+    font-size: 2em;
+  }
+  .hero-text p {
+    font-size: 1em;
+  }
+
+  .about-slider {
+    height: 300px;
+  }
+
+  .course-card {
+    width: 90%;
+  }
+
+  .videos video {
+    width: 90%;
+  }
+}
