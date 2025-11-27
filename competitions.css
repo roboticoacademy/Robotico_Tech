@@ -273,41 +273,34 @@ background: linear-gradient(135deg, #0066ff, #ff8c00);
 /* ====== VIDEOS GRID ====== */
 .videos-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 فيديوهات بالصف */
-  gap: 25px;
-  padding: 40px 20px;
-  justify-items: center;
+  grid-template-columns: repeat(3, 1fr); /* 3 فيديو في صف */
+  gap: 20px;
+  padding: 20px;
 }
 
-.videos-grid video {
+.videos-grid iframe {
   width: 100%;
-  height: 200px; /* طول ثابت لجميع الفيديوهات */
-  object-fit: cover; /* يضمن أن الفيديوهات كلها بنفس الأبعاد بدون تشويه */
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  aspect-ratio: 16 / 9; /* يخلي الفيديو محافظ على شكله */
+  border: none;
+  border-radius: 10px;
 }
 
-.videos-grid video:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
-}
-
-/* ====== RESPONSIVE ====== */
-@media(max-width:1024px) {
+/* للتابلت: صفين */
+@media (max-width: 900px) {
   .videos-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 فيديوهات في الصف على الشاشات المتوسطة */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media(max-width:600px) {
+/* للموبايل: فيديو واحد */
+@media (max-width: 600px) {
   .videos-grid {
-    grid-template-columns: 1fr; /* فيديو واحد في الصف على الموبايل */
-  }
-  .videos-grid video {
-    height: 180px; /* حجم أصغر على الموبايل */
+    grid-template-columns: 1fr;
   }
 }
+
+
+
 
 
 /* ====== RESPONSIVE ====== */
