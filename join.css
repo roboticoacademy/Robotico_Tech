@@ -30,6 +30,7 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+  text-decoration: none; /* لإزالة أي underline لو الرابط */
 }
 
 .logo {
@@ -37,8 +38,10 @@ body {
 }
 
 .site-name {
-  font-size: 1.4rem;
+  font-size: 1.5em;
   font-weight: bold;
+  color: white; /* نفس اللون الأزرق */
+  text-decoration: none; /* نشيل الخط */
 }
 
 nav ul {
