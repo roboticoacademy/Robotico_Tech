@@ -5,6 +5,10 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+html, body {
+  overflow-x: hidden; /* يمنع أي overflow أفقي */
+  width: 100%;
+}
 
 body {
   background-color: #f9fafb;
@@ -278,7 +282,14 @@ nav a:hover, nav a.active {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+.about, .about-cards, .hero {
+  width: 100%;
+  box-sizing: border-box;
+}
 /* ================== FOOTER ================== */
 footer {
   background: linear-gradient(90deg, #0056b3, #ff6600);
