@@ -274,15 +274,17 @@ nav a:hover, nav a.active {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 10px;         /* قلل الهامش عشان ميعملش overflow */
+  padding: 0 10px;   /* padding بسيط جوه الحاوية */
+  box-sizing: border-box; /* مهم */
 }
-
 .videos video {
-  width: 100%;     /* ياخد كامل عرض الحاوية */
-  max-width: 350px; /* بس ما يزيدش عن 350px */
-  height: auto;    /* يحافظ على نسبة العرض للارتفاع */
+  width: 100%;       
+  max-width: 350px;  
+  height: auto;       
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: block;    
 }
 
 .about, .about-cards, .hero {
