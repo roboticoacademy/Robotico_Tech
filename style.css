@@ -278,7 +278,9 @@ nav a:hover, nav a.active {
 }
 
 .videos video {
-  width: 350px;
+  width: 100%;     /* ياخد كامل عرض الحاوية */
+  max-width: 350px; /* بس ما يزيدش عن 350px */
+  height: auto;    /* يحافظ على نسبة العرض للارتفاع */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
