@@ -437,7 +437,11 @@ footer hr {
     width: 90%;
   }
 
-  .videos video {
-    width: 90%;
+  .videos {
+    gap: 5px;        /* أقل هامش عشان يناسب الموبايل */
   }
+  .videos video {
+    max-width: 100%; /* يمتلئ الشاشة */
+  }
+
 }
