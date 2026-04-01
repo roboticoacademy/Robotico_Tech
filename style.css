@@ -380,6 +380,9 @@ footer hr {
   .course-list {
     justify-content: center;
   }
+   .videos video {
+    max-width: 100%; /* يمتلئ الشاشة */
+  
 }
 
 @media (max-width: 768px) {
