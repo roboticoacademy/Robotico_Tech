@@ -361,7 +361,13 @@ footer hr {
   border: none;
   border-top: 1px solid #ffffff44;
 }
-
+.videos video {
+  width: 100%;
+  max-width: 400px; /* يخليه مايكبرش زيادة */
+  height: auto;
+  display: block;
+  margin: auto;
+}
 /* ================== RESPONSIVE ================== */
 @media (max-width: 1024px) {
   .about-slider {
