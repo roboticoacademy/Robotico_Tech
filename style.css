@@ -447,8 +447,11 @@ footer hr {
   .videos {
     gap: 5px;        /* أقل هامش عشان يناسب الموبايل */
   }
-  .videos video {
-    max-width: 50%; /* يمتلئ الشاشة */
+  
+   .videos video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
   }
 
 }
