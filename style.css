@@ -370,21 +370,53 @@ footer hr {
 }
 /* ================== RESPONSIVE ================== */
 /* ✅ شكل الفيديو الأساسي (ده أهم جزء) */
-.videos {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
+/* wrapper للفيديوهات */
+.video-wrapperi {
+  flex: 1 1 350px; /* يسمح للفيديو بالتمدد والإنكماش مع الشاشه */
+  max-width: 600px; 
+  margin: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+height:400px;
 }
 
-.videos video {
+/* iframe أو video داخل wrapper */
+.video-wrapperi iframe,
+.video-wrapperi video {
   width: 100%;
-  max-width: 400px; /* 👈 يتحكم في حجمه على اللاب */
-  height: auto;
+  height: 100%;
+ /* يحافظ على النسبة */
+  display: block;
+}
+.video-wrappero {
+  flex: 1 1 350px; /* يسمح للفيديو بالتمدد والإنكماش مع الشاشه */
+  max-width: 600px; 
+  margin: 10px;
   border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+height:400px;
+}
+
+/* iframe أو video داخل wrapper */
+.video-wrappero iframe,
+.video-wrappero video {
+  width: 100%;
+  height: 100%;
+ /* يحافظ على النسبة */
   display: block;
 }
 
+/* تعديل حاوية الفيديوهات */
+.videos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* يحط الفيديوهات في النص */
+  gap: 20px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
 /* ================== RESPONSIVE ================== */
 
 @media (max-width: 1024px) {
