@@ -126,7 +126,7 @@ tr:last-child td{border-bottom:none}
 .login-bg-shape{position:absolute;border-radius:50%;opacity:.08;background:white}
 .login-card{background:white;border-radius:24px;padding:40px;width:100%;max-width:420px;box-shadow:0 30px 80px rgba(0,0,0,0.3);position:relative;z-index:1}
 .login-logo{text-align:center;margin-bottom:32px}
-.login-logo-icon{width:72px;height:72px;background:var(--orange);border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:36px;margin:0 auto 12px}
+.login-logo-icon{width:72px;height:72px;border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:36px;margin:0 auto 12px}
 .login-logo-text{font-size:24px;font-weight:900;color:var(--primary)}
 .login-logo-sub{font-size:13px;color:var(--gray);font-weight:500}
 .login-role-tabs{display:flex;background:var(--light-gray);border-radius:10px;padding:4px;margin-bottom:24px;gap:2px}
@@ -617,7 +617,7 @@ function LoginPage({data,setCurrentUser,setParentUser,lang,toggleLang}){
     <div className="login-bg-shape" style={{width:300,height:300,bottom:-80,right:200}}/>
     <div className="login-card">
       <div className="login-logo">
-        <div className="login-logo-icon">🤖</div>
+        <div className="login-logo-icon"><img src="../images/logo3.png" width='90' alt="Logo"/></div>
         <div className="login-logo-text">روبوتيكو</div>
         <div className="login-logo-sub">{lang==='ar'?'منصة الإدارة الأكاديمية':'Academic Management Platform'}</div>
       </div>
