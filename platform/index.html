@@ -281,7 +281,7 @@ const KEY = 'robotico_v2';
 function ci(str,search){return (str||'').toLowerCase().includes((search||'').toLowerCase());}
 
 const DAYS = ['السبت','الأحد','الاثنين','الثلاثاء','الأربعاء','الخميس','الجمعة'];
-const COURSES=['روبوتيكو الجزء الأول','روبوتيكو الجزء الثاني','روبوتيكو الجزء الثالث','Python للروبوت','Arduino المتقدم','Scratch للأطفال','مسابقات الروبوت'];
+const COURSES=['LEGO','ARDUINO','PYTHON','SCRATCH','COMPETITION','AI','MOBILE APPLICATION'];
 const GRADES=Array.from({length:8},(_,i)=>`Grade ${i+1}`);
 // ─── LANGUAGE / i18n ──────────────────────────────────────────────────────────
 const T={
@@ -653,7 +653,7 @@ function LoginPage({data,setCurrentUser,setParentUser,lang,toggleLang}){
     <div className="login-card">
       <div className="login-logo">
         <div className="login-logo-icon"><img src="../images/logo3.png"   width='90' alt="Logo"/></div>
-        <div className="login-logo-text">روبوتيكو</div>
+        <div className="login-logo-text">روبوتيكو </div>
         <div className="login-logo-sub">{lang==='ar'?'منصة الإدارة الأكاديمية':'Academic Management Platform'}</div>
       </div>
       <div style={{position:'absolute',top:16,left:16}}>
@@ -739,7 +739,7 @@ function ReceiptModal({show,onClose,payment,student}){
     </>}>
     <div className="receipt print-receipt">
       <div className="receipt-header">
-        <div style={{fontSize:30,marginBottom:4}}>🤖</div>
+        <div style={{fontSize:30,marginBottom:4}}><img src="../images/logo3.png" width="60" alt="Logo"/></div>
         <div className="receipt-logo">روبوتيكو</div>
         <div style={{fontSize:12,color:'var(--gray)',marginTop:4}}>أكاديمية البرمجة والروبوت</div>
       </div>
@@ -756,7 +756,7 @@ function ReceiptModal({show,onClose,payment,student}){
       {payment.discount>0&&<div className="receipt-row"><span style={{color:'var(--gray)'}}>المبلغ الأصلي</span><span style={{fontWeight:700,textDecoration:'line-through',color:'var(--gray)'}}>{payment.originalAmount} جنيه</span></div>}
       {payment.discount>0&&<div className="receipt-row"><span style={{color:'var(--success)'}}>💚 خصم</span><span style={{fontWeight:700,color:'var(--success)'}}>- {payment.discount} جنيه</span></div>}
       <div className="receipt-row total"><span>المبلغ المدفوع</span><span style={{color:'var(--success)'}}>💰 {payment.amount} جنيه</span></div>
-      <div style={{textAlign:'center',marginTop:20,fontSize:11.5,color:'var(--gray)'}}>شكراً لثقتك في روبوتيكو 🤖</div>
+      <div style={{textAlign:'center',marginTop:20,fontSize:11.5,color:'var(--gray)'}}>شكراً لثقتك في روبوتيكو<img src="../images/logo3.png" width="90" alt="Logo"/> <img src="../images/logo3.png"   width='60' alt="Logo"/></div>
     </div>
   </Modal>;
 }
@@ -2124,7 +2124,7 @@ function StudentDetail({student,data,update,onClose,setShowReceipt}){
 المبلغ: ${p.amount} جنيه
 عن: ${p.month}
 تاريخ: ${formatDate(p.date)}
-شكراً لثقتك في روبوتيكو 🤖`)} target="_blank" rel="noreferrer">💬</a>}
+شكراً لثقتك في روبوتيكو `)} target="_blank" rel="noreferrer">💬</a>}
           </div>
         </div>)}
       </div>}
@@ -4506,7 +4506,7 @@ function StudentPanel({data,setData,currentUser,setCurrentUser,lang='ar',toggleL
     <header className="simple-header">
       <div style={{display:'flex',alignItems:'center',gap:12}}>
         <div style={{width:38,height:38,background:'var(--orange)',borderRadius:10,display:'flex',alignItems:'center',justifyContent:'center',fontSize:20,flexShrink:0}}>🤖</div>
-        <div style={{color:'white',fontWeight:800,fontSize:17}}>روبوتيكو</div>
+        <div style={{color:'white',fontWeight:800,fontSize:17}}>روبوتيكو<img src="../images/logo3.png" width="90" alt="Logo"/></div>
         <span style={{background:'rgba(255,255,255,0.15)',color:'white',fontSize:11,fontWeight:700,padding:'2px 8px',borderRadius:6}}>منصة الطالب</span>
       </div>
       <div className="simple-nav">
@@ -4708,7 +4708,7 @@ function StudentPanel({data,setData,currentUser,setCurrentUser,lang='ar',toggleL
             </div>:
             myCerts.map(cert=>{
               const parentPhone=myStudent.phone;
-              const waMsg=`🎉 مبروك يا ${myStudent.name}!\n\nلقد أتم ابنك/ابنتك ${myStudent.name} بنجاح مستوى ${cert.grade} في كورس ${cert.course} بتاريخ ${cert.date} 🏆\n\nيمكنك الآن تحميل الشهادة من خلال منصة روبوتيكو.\n\nأكاديمية روبوتيكو 🤖`;
+              const waMsg=`🎉 مبروك يا ${myStudent.name}!\n\nلقد أتم ابنك/ابنتك ${myStudent.name} بنجاح مستوى ${cert.grade} في كورس ${cert.course} بتاريخ ${cert.date} 🏆\n\nيمكنك الآن تحميل الشهادة من خلال منصة روبوتيكو.\n\nأكاديمية روبوتيكو `;
               return <div key={cert.key} className="card" style={{marginBottom:12,border:'2px solid var(--orange)'}}>
                 <div style={{display:'flex',alignItems:'center',gap:14}}>
                   <div style={{fontSize:40,flexShrink:0}}>🎓</div>
@@ -5482,7 +5482,7 @@ function exportInstReport(inst,month,data,calcGrpHours){
 <body>
 <div class="header">
   <div>
-    <div style="font-size:22px;font-weight:900;color:#1D4ED8">🤖 أكاديمية روبوتيكو</div>
+    <div style="font-size:22px;font-weight:900;color:#1D4ED8"><img src="../images/logo3.png" width="90" alt="Logo"/> أكاديمية روبوتيكو</div>
     <div style="font-size:12px;color:#6B7280;margin-top:4px">كشف حساب محاضر</div>
   </div>
   <div style="text-align:left">
