@@ -455,7 +455,7 @@ function load(){
     return merged;
   }catch{return defaultData;}
 }
-function save(d){localStorage.setItem(KEY,JSON.stringify(d));}
+
 function save(d){
   localStorage.setItem(KEY,JSON.stringify(d));
   if(window.cloudSave) window.cloudSave(d);
