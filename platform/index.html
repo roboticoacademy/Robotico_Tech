@@ -463,11 +463,9 @@ function save(d){
 // FIREBASE CLOUD SAVE
 window.cloudSave = async function(d){
   try{
-    if(!window.db) return;
+    if(!window.db || !window.firebaseFirestore) return;
 
-    const { doc, setDoc } = await import(
-      "https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js"
-    );
+    const { doc, setDoc } = window.firebaseFirestore;
 
     await setDoc(
       doc(window.db, "robotico", "mainData"),
@@ -475,6 +473,7 @@ window.cloudSave = async function(d){
     );
 
     console.log("✅ Robotico data saved to Firebase");
+
   }catch(error){
     console.error("❌ Firebase save error:", error);
   }
@@ -7570,49 +7569,43 @@ function App(){
   const [data,setData]=useState(load);
 
   React.useEffect(()=>{
-    async function loadFromFirebase(){
-      try{
-        if(!window.db) return;
+  if(!window.db || !window.firebaseFirestore) return;
 
-        const { doc, getDoc } = await import(
-          "https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js"
-        );
+  const { doc, onSnapshot } = window.firebaseFirestore;
 
-        const snap = await getDoc(
-          doc(window.db, "robotico", "mainData")
-        );
+  const ref = doc(window.db, "robotico", "mainData");
 
-        if(snap.exists()){
-          const firebaseData = snap.data();
-
-          setData(prev=>{
-            const merged = {...prev, ...firebaseData};
-
-            // Ensure array fields are never undefined
-            [
-              'trials','parentNotes','ratings','quizzes','instTasks',
-              'instFilesList','students','instructors','groups',
-              'attendance','instAttendance','payments'
-            ].forEach(k=>{
-              if(!Array.isArray(merged[k])){
-                merged[k]=prev[k]||[];
-              }
-            });
-
-            return merged;
-          });
-
-          console.log("✅ Robotico data loaded from Firebase");
-        }else{
-          console.log("⚠️ No Robotico data found in Firebase");
-        }
-      }catch(error){
-        console.error("❌ Firebase load error:",error);
-      }
+  const unsubscribe = onSnapshot(ref, (snap)=>{
+    if(!snap.exists()){
+      console.log("⚠️ No Robotico data found in Firebase");
+      return;
     }
 
-    loadFromFirebase();
-  },[]);
+    const firebaseData = snap.data();
+
+    setData(prev=>{
+      const merged = {...prev, ...firebaseData};
+
+      [
+        'trials','parentNotes','ratings','quizzes','instTasks',
+        'instFilesList','students','instructors','groups',
+        'attendance','instAttendance','payments'
+      ].forEach(k=>{
+        if(!Array.isArray(merged[k])){
+          merged[k] = prev[k] || [];
+        }
+      });
+
+      return merged;
+    });
+
+    console.log("🔄 Robotico data synced from Firebase");
+  }, (error)=>{
+    console.error("❌ Firebase realtime error:", error);
+  });
+
+  return ()=>unsubscribe();
+},[]);
   const [lang,setLang]=useState(()=>{try{return localStorage.getItem('robotico_lang')||'ar';}catch{return 'ar';}});
   const [currentUser,setCurrentUser]=useState(()=>{
     try{const s=sessionStorage.getItem('robotico_session');return s?JSON.parse(s):null;}catch{return null;}
@@ -7664,14 +7657,16 @@ function App(){
 ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
 </script>
 <script type="module">
-  // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
-  import { getFirestore } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  import {
+    getFirestore,
+    doc,
+    getDoc,
+    setDoc,
+    onSnapshot
+  } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js";
+
   const firebaseConfig = {
     apiKey: "AIzaSyDJEe5sSxUfvKV5Mu1uPNq58FRX3rbhbX0",
     authDomain: "robotico-a0f6f.firebaseapp.com",
@@ -7682,11 +7677,20 @@ ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
     measurementId: "G-EFLNL2LLP7"
   };
 
-  // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
+
   window.db = db;
-  
+
+  window.firebaseFirestore = {
+    doc,
+    getDoc,
+    setDoc,
+    onSnapshot
+  };
+
+  console.log("✅ Firebase OK");
+</script>
 </script>
 </body>
 </html>
