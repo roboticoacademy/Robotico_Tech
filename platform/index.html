@@ -349,7 +349,7 @@ const ARAB_COUNTRIES=[
   {name:'جزر القمر',code:'269',flag:'🇰🇲'},
 ];
 const NUM_GRADES=8;
-function getGrades(d){return Array.from({length:d&&d.numGrades?d.numGrades:NUM_GRADES},function(_,i){return 'Grade '+(i+1);});}
+function getGrades(d){return Array.from({length:d&&d.numGrades?d.numGrades:NUM_GRADES},function(_,i){return 'Grade '+(i);});}
 const TIME_SLOTS=[
   {v:'07:00',l:'7:00 ص'},{v:'07:30',l:'7:30 ص'},{v:'08:00',l:'8:00 ص'},{v:'08:30',l:'8:30 ص'},
   {v:'09:00',l:'9:00 ص'},{v:'09:30',l:'9:30 ص'},{v:'10:00',l:'10:00 ص'},{v:'10:30',l:'10:30 ص'},
@@ -783,7 +783,7 @@ function ReceiptModal({show,onClose,payment,student}){
 
 // ─── STUDENT FORM ─────────────────────────────────────────────────────────────
 function StudentForm({initial,groups,courseNames,data,onSave,onCancel,isEdit}){
-  const def={studentId:'',name:'',dob:'',course:(courseNames||COURSES)[0]||COURSES[0],grade:'Grade 1',startDate:today(),groupId:'',fee:500,phone:'',status:'active',...initial};
+  const def={studentId:'',name:'',dob:'',course:(courseNames||COURSES)[0]||COURSES[0],grade:'Grade 0',startDate:today(),groupId:'',fee:500,phone:'',status:'active',...initial};
   const [f,setF]=useState(def);
   const set=k=>e=>setF(p=>({...p,[k]:e.target.value}));
   const age=calcAge(f.dob);
@@ -819,7 +819,7 @@ function StudentForm({initial,groups,courseNames,data,onSave,onCancel,isEdit}){
       <Select label="الكورس" required value={f.course} onChange={set('course')}>
         {(courseNames||COURSES).map((c,i)=><option key={i} value={c}>{c}</option>)}
       </Select>
-      <Select label="Grade" required value={f.grade||'Grade 1'} onChange={set('grade')}>
+      <Select label="Grade" required value={f.grade||'Grade 0'} onChange={set('grade')}>
         {getGrades(data).map(g=><option key={g}>{g}</option>)}
       </Select>
       <Input label="تاريخ البداية" required type="date" value={f.startDate} onChange={set('startDate')}/>
