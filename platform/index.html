@@ -7146,7 +7146,7 @@ function SuperAdminPanel({data,setData,currentUser,setCurrentUser,lang='ar',togg
         </div>
         <div className="topbar-actions">
           <button onClick={toggleLang} className="btn btn-ghost btn-sm" style={{fontWeight:700}}>🌐 {T[lang].lang}</button>
-          <button className="btn btn-danger btn-sm" onClick={()=>{if(confirm(lang==='ar'?'خروج؟':'Logout?'))setCurrentUser(null);}}>⏻ {T[lang].logout}</button>
+          <button className="btn btn-danger btn-sm" onClick={()=>{if(confirm(lang==='ar'?'خروج؟':'Logout?'))setCurrentUser(null);}}>{T[lang].logout}</button>
         </div>
       </div>
       <div className="content">
