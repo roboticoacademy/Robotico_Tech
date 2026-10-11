@@ -8,6 +8,42 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.24.4/babel.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script>
+/* Runtime i18n: ar<->en text/placeholder translation + dir switching + mobile drawer */
+(function(){
+var D={"روبوتيكو": "Robotico", "الطلبة المحتملين": "Prospective Students", "منصة الإدارة الأكاديمية": "Academic Management Platform", "اسم المستخدم": "Username", "كلمة المرور": "Password", "أدخل اسم المستخدم": "Enter username", "أدخل كلمة المرور": "Enter password", "أدخل اسم المستخدم وكلمة المرور": "Enter username and password", "اسم المستخدم أو كلمة المرور غير صحيحة": "Incorrect username or password", "سجّل دخولك وسيتم توجيهك تلقائياً لمنصتك": "Sign in and you will be redirected to your portal", "دخول ولي الأمر برقم الهاتف": "Parent login with phone number", "دخول ولي الأمر": "Parent Login", "دخول": "Login", "اختر الطالب": "Select student", "طلاب مسجلين بهذا الرقم": "students registered with this number", "يوجد": "There are", "رجوع لتسجيل الدخول": "Back to login", "رجوع": "Back", "أدخل رقم الهاتف المسجل لدى الأكاديمية وسنرسل لك كود تحقق برسالة نصية": "Enter the phone number registered with the academy and we will send you a verification code by SMS", "الدولة": "Country", "رقم هاتف الطالب": "Student phone number", "أدخل رقم الهاتف": "Enter phone number", "لا يوجد طالب بهذا الرقم": "No student found with this number", "إرسال كود التحقق": "Send verification code", "جاري إرسال الكود...": "Sending code...", "تأكيد رقم الهاتف": "Confirm phone number", "تم إرسال كود التحقق برسالة نصية إلى": "A verification code was sent by SMS to", "كود التحقق": "Verification code", "تأكيد ودخول": "Verify & login", "جاري التحقق...": "Verifying...", "يمكنك إعادة إرسال الكود بعد": "You can resend the code in", "ثانية": "seconds", "إعادة إرسال الكود": "Resend code", "تغيير رقم الهاتف": "Change phone number", "أدخل كود التحقق المكون من 6 أرقام": "Enter the 6-digit verification code", "كود التحقق غير صحيح": "Incorrect verification code", "انتهت صلاحية الكود، اطلب كوداً جديداً": "Code expired, request a new one", "رقم الهاتف غير صالح": "Invalid phone number", "عدد المحاولات كبير، حاول مرة أخرى بعد قليل": "Too many attempts, try again later", "تعذّر إتمام التحقق، حاول مرة أخرى": "Verification failed, please try again", "لوحة التحكم": "Dashboard", "إدارة الطلاب": "Student Management", "المحاضرة المجانية": "Free Trial Lecture", "تسجيل الحضور": "Attendance", "المدفوعات": "Payments", "المحاضرون": "Instructors", "حضور المحاضرين": "Instructor Attendance", "الرواتب والساعات": "Salaries & Hours", "متابعة الواجبات": "Homework Tracking", "المجموعات": "Groups", "إرسال جماعي": "Broadcast", "مهام المحاضرين": "Instructor Tasks", "الاختبارات الدورية": "Periodic Quizzes", "تصدير / استيراد البيانات": "Export / Import Data", "لوحة أولياء الأمور": "Parents Board", "بوابة ولي الأمر": "Parent Portal", "بوابة المحاضر": "Instructor Portal", "منصة الطالب": "Student Portal", "الاسم الكامل": "Full name", "رقم الهاتف": "Phone number", "الكورس": "Course", "المستوى": "Level", "المجموعة": "Group", "الرسوم الشهرية": "Monthly fee", "الحالة": "Status", "الحضور": "Attendance", "واتساب": "WhatsApp", "إيصال": "Receipt", "لا توجد بيانات": "No data", "الطالب": "Student", "الطلاب": "Students", "طالب": "student", "المحاضر": "Instructor", "ولي أمر": "Parent", "ولي الأمر": "Parent", "الاختبار": "Quiz", "الواجب": "Homework", "المحاضرة": "Lecture", "إضافة": "Add", "حفظ": "Save", "تعديل": "Edit", "حذف": "Delete", "إلغاء": "Cancel", "بحث": "Search", "تصدير": "Export", "استيراد": "Import", "طباعة": "Print", "إرسال": "Send", "تأكيد": "Confirm", "إغلاق": "Close", "خروج": "Logout", "تحميل": "Download", "نشط": "Active", "موقوف": "Suspended", "غير نشط": "Inactive", "مدفوع": "Paid", "غير مدفوع": "Unpaid", "حاضر": "Present", "غائب": "Absent", "الكل": "All", "اليوم": "Today", "الاسم": "Name", "التاريخ": "Date", "المبلغ": "Amount", "ملاحظات": "Notes", "ملاحظة": "Note", "الرئيسية": "Home", "التقييم": "Rating", "الدرجة": "Grade", "الإجمالي": "Total", "المجموع": "Total", "جديدة": "new", "نعم": "Yes", "لا": "No", "تم الحفظ": "Saved", "حذف هذا المنشور؟": "Delete this post?", "حذف؟": "Delete?", "يناير": "January", "فبراير": "February", "مارس": "March", "أبريل": "April", "مايو": "May", "يونيو": "June", "يوليو": "July", "أغسطس": "August", "سبتمبر": "September", "أكتوبر": "October", "نوفمبر": "November", "ديسمبر": "December"};
+var K=Object.keys(D).sort(function(a,b){return b.length-a.length;}),AR=/[\u0600-\u06FF]/,on=false,O=new WeakMap();
+function tr(s){if(!AR.test(s))return s;var t=s.trim();if(D[t])return s.replace(t,D[t]);for(var i=0;i<K.length;i++){if(s.indexOf(K[i])>-1)s=s.split(K[i]).join(D[K[i]]);}return s;}
+var AT=['placeholder','title','alt'];
+function fix(n){
+  if(n.nodeType===3){var p=n.parentNode;if(p&&(p.nodeName==='SCRIPT'||p.nodeName==='STYLE'))return;var v=n.nodeValue,r=O.get(n);
+    if(on){if(r&&r.t===v)return;var t=tr(v);O.set(n,{o:v,t:t});if(t!==v)n.nodeValue=t;}
+    else if(r&&r.t===v){n.nodeValue=r.o;O.delete(n);}
+  }else if(n.nodeType===1){
+    if(n.nodeName==='SCRIPT'||n.nodeName==='STYLE')return;
+    AT.forEach(function(a){if(!n.hasAttribute(a))return;var v=n.getAttribute(a),k='_o'+a,r=n[k];
+      if(on){if(r&&r.t===v)return;var t=tr(v);n[k]={o:v,t:t};if(t!==v)n.setAttribute(a,t);}
+      else if(r&&r.t===v){n.setAttribute(a,r.o);n[k]=null;}});
+    for(var c=n.firstChild;c;c=c.nextSibling)fix(c);
+  }
+}
+var obs=new MutationObserver(function(ms){ms.forEach(function(m){
+  if(m.type==='childList')m.addedNodes.forEach(fix);else fix(m.target);});obs.takeRecords();});
+window.__setLang=function(l){
+  var h=document.documentElement;h.lang=l;h.dir=l==='en'?'ltr':'rtl';on=(l==='en');
+  fix(document.body);
+};
+document.addEventListener('DOMContentLoaded',function(){
+  obs.observe(document.body,{childList:true,subtree:true,characterData:true,attributes:true,attributeFilter:AT});
+  var b=document.createElement('button');b.id='menu-btn';b.innerHTML='&#9776;';b.setAttribute('aria-label','menu');
+  var o=document.createElement('div');o.id='menu-ov';
+  document.body.appendChild(b);document.body.appendChild(o);
+  b.onclick=function(){document.body.classList.toggle('menu-open');};
+  o.onclick=function(){document.body.classList.remove('menu-open');};
+  document.addEventListener('click',function(e){if(e.target.closest&&e.target.closest('.nav-item'))document.body.classList.remove('menu-open');});
+});
+})();
+</script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -18,7 +54,8 @@
   --border:#E2ECF0;--success:#10B981;--danger:#EF4444;--warning:#F59E0B;
   --text:#1A2E35;--text-light:#4A6572;
 }
-body{font-family:'Cairo',sans-serif;background:var(--light-gray);color:var(--text);direction:rtl;overflow:hidden;height:100vh}
+body{font-family:'Cairo',sans-serif;background:var(--light-gray);color:var(--text);overflow:hidden;height:100vh}
+html[dir=rtl] body{direction:rtl}html[dir=ltr] body{direction:ltr}
 
 .app{display:flex;height:100vh;overflow:hidden}
 /* SIDEBAR */
@@ -269,6 +306,50 @@ tr:last-child td{border-bottom:none}
 .simple-content{flex:1;padding:28px;background:var(--light-gray);overflow-y:auto;overflow-x:hidden}
 .cred-box{background:var(--primary-bg);border:1.5px solid var(--primary);border-radius:10px;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;margin-top:8px}
 .cred-text{font-family:monospace;font-size:14px;font-weight:700;color:var(--primary);letter-spacing:1px}
+/* ===== RESPONSIVE + LTR ===== */
+img,video,canvas,svg{max-width:100%}
+input,select,textarea{max-width:100%}
+.modal-footer,.section-header,.topbar-actions{flex-wrap:wrap;gap:8px}
+html[dir=ltr] th{text-align:left}
+html[dir=ltr] .nav-badge{margin-right:0;margin-left:auto}
+html[dir=ltr] .sidebar{right:auto;left:0}
+@media (min-width:901px){html[dir=ltr] .main{margin-right:0;margin-left:260px}}
+#menu-btn{display:none;position:fixed;top:10px;inset-inline-start:12px;z-index:400;width:42px;height:42px;border:none;border-radius:11px;background:var(--primary);color:#fff;font-size:22px;cursor:pointer;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+html[dir=rtl] #menu-btn{right:12px;left:auto}html[dir=ltr] #menu-btn{left:12px;right:auto}
+#menu-ov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:250}
+@media (max-width:1200px){.stat-grid{grid-template-columns:repeat(2,1fr)!important}.content{padding:20px}}
+@media (max-width:900px){
+  body:has(.sidebar) #menu-btn{display:flex}
+  body.menu-open #menu-ov{display:block}
+  body{overflow:hidden;height:100vh}
+  .app{flex-direction:row;height:100vh;overflow:hidden}
+  .sidebar{width:270px;max-width:84vw;height:100vh;position:fixed;top:0;flex-direction:column;flex-wrap:nowrap;transition:transform .25s;z-index:300;right:0;left:auto;transform:translateX(105%)}
+  html[dir=ltr] .sidebar{right:auto;left:0;transform:translateX(-105%)}
+  body.menu-open .sidebar{transform:none!important}
+  .sidebar-nav{display:block;flex:1;padding:16px 12px;overflow-y:auto}
+  .sidebar-section{display:block;margin-bottom:22px}
+  .sidebar-section-title{display:block}
+  .nav-item{padding:11px 14px;font-size:14px;border-radius:10px}
+  .sidebar-logo{padding:22px 20px;flex:none}
+  .sidebar-footer{padding:16px;border-left:none;border-top:1px solid rgba(255,255,255,.1)}
+  .main{margin:0!important;width:100%;height:100vh;overflow-y:auto;overflow-x:hidden}
+  .topbar{padding:12px 16px;padding-inline-start:64px;flex-wrap:wrap;gap:8px}
+  .topbar-title{font-size:16px}
+  .content{padding:14px}
+  .form-control{font-size:16px}
+  .btn{min-height:38px}
+}
+@media (max-width:700px){
+  [style*="grid-template-columns"]:not(.stat-grid){grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr))!important}
+  [style*="display: flex"][style*="gap"]{flex-wrap:wrap}
+  .login-card{padding:24px 18px;margin:12px;width:auto}
+  .modal-header,.modal-body,.modal-footer{padding-left:16px;padding-right:16px}
+  .modal-footer .btn{flex:1;justify-content:center}
+}
+@media (max-width:380px){.stat-grid{grid-template-columns:1fr!important}.btn{padding:8px 12px}}
+@media (hover:none){.nav-item,.tab,.simple-nav-item{min-height:40px}}
+@media (min-width:1600px){.content{max-width:1500px;margin-inline:auto;width:100%}}
+
 </style>
 </head>
 <body>
@@ -410,6 +491,7 @@ const defaultData={
   content:{},
   lectureNames:[...LECTURE_NAMES],
   trials:[],       // free lecture leads
+  prospects:[],    // prospective students
   studentRatings:[],
   instNotifications:[], // notifications sent to instructors from super admin
   salarySettlements:[], // {id, month, instructorId, amount, paidAt}
@@ -439,7 +521,7 @@ function load(){
     const stored=JSON.parse(s);
     const merged={...defaultData,...stored};
     // Ensure array fields are never undefined
-    ['trials','parentNotes','ratings','quizzes','instTasks','instFilesList','students','instructors','groups','attendance','instAttendance','payments'].forEach(k=>{if(!Array.isArray(merged[k]))merged[k]=defaultData[k]||[];});
+    ['trials','prospects','parentNotes','ratings','quizzes','instTasks','instFilesList','students','instructors','groups','attendance','instAttendance','payments'].forEach(k=>{if(!Array.isArray(merged[k]))merged[k]=defaultData[k]||[];});
     if(typeof merged.content!=='object'||Array.isArray(merged.content))merged.content={};
     if(typeof merged.lectureQs!=='object'||Array.isArray(merged.lectureQs))merged.lectureQs={};
     if(typeof merged.aiReports!=='object'||Array.isArray(merged.aiReports))merged.aiReports={};
@@ -487,10 +569,10 @@ function calcDue(student){
 }
 function getMonthLabel(d){
   const dt=new Date(d);
-  return dt.toLocaleDateString('ar-EG',{year:'numeric',month:'long'});
+  return dt.toLocaleDateString((document.documentElement.lang==='en'?'en-GB':'ar-EG'),{year:'numeric',month:'long'});
 }
 function today(){return new Date().toISOString().substr(0,10);}
-function formatDate(d){if(!d)return '';try{return new Date(d).toLocaleDateString('ar-EG',{year:'numeric',month:'short',day:'numeric'});}catch{return d;}}
+function formatDate(d){if(!d)return '';try{return new Date(d).toLocaleDateString((document.documentElement.lang==='en'?'en-GB':'ar-EG'),{year:'numeric',month:'short',day:'numeric'});}catch{return d;}}
 function calcAge(dob){if(!dob)return null;const b=new Date(dob);const n=new Date();let age=n.getFullYear()-b.getFullYear();if(n.getMonth()<b.getMonth()||(n.getMonth()===b.getMonth()&&n.getDate()<b.getDate()))age--;return age>=0?age:null;}
 function waLink(phone,text,countryCode){if(!phone)return '#';let p=phone.replace(/\s+/g,'').replace(/[^0-9+]/g,'');const cc=countryCode||'20';if(p.startsWith('0'))p=cc+p.slice(1);else if(!p.startsWith('+')&&!p.startsWith(cc))p=cc+p;p=p.replace('+','');return text?`https://wa.me/${p}?text=${encodeURIComponent(text)}`:`https://wa.me/${p}`;}
 // Find ALL students that share a parent phone number (siblings)
@@ -504,6 +586,14 @@ function matchStudentsByPhone(students,phone,countryCode){
     const sp0=sp.startsWith(cc)?'0'+sp.slice(cc.length):sp;
     return sp===raw||sp===cc+raw||sp0===raw||sp0==='0'+raw||sp===cc+raw.replace(/^0/,'');
   });
+}
+// Build an international (E.164) phone number for SMS verification
+function toE164(phone,countryCode){
+  let d=(phone||'').replace(/[^0-9]/g,'');
+  const cc=countryCode||'20';
+  if(d.startsWith('00'))d=d.slice(2);
+  if(d.startsWith(cc)&&d.length>=cc.length+8)return '+'+d;
+  return '+'+cc+d.replace(/^0+/,'');
 }
 const MONTHS_AR=['يناير','فبراير','مارس','أبريل','مايو','يونيو','يوليو','أغسطس','سبتمبر','أكتوبر','نوفمبر','ديسمبر'];
 
@@ -629,6 +719,82 @@ function LoginPage({data,setCurrentUser,setParentUser,lang,toggleLang}){
   const [showParent,setShowParent]=useState(false);
   const [parentErr,setParentErr]=useState('');
   const [parentChoices,setParentChoices]=useState(null);
+  // ── SMS verification (Firebase Phone Auth) ──
+  const [otpStep,setOtpStep]=useState(false);
+  const [otp,setOtp]=useState('');
+  const [otpBusy,setOtpBusy]=useState(false);
+  const [resendIn,setResendIn]=useState(0);
+  const [sentTo,setSentTo]=useState('');
+  const confirmRef=useRef(null);
+  const matchesRef=useRef([]);
+  const verifierRef=useRef(null);
+
+  useEffect(()=>{
+    if(resendIn<=0)return;
+    const t=setTimeout(()=>setResendIn(n=>n-1),1000);
+    return ()=>clearTimeout(t);
+  },[resendIn]);
+  useEffect(()=>()=>clearVerifier(),[]);
+
+  function clearVerifier(){
+    try{verifierRef.current&&verifierRef.current.clear();}catch(e){}
+    verifierRef.current=null;
+    const el=document.getElementById('recaptcha-container');
+    if(el)el.innerHTML='';
+  }
+  function resetOtp(){
+    setOtpStep(false);setOtp('');setResendIn(0);setSentTo('');
+    confirmRef.current=null;clearVerifier();
+  }
+  function otpErrMsg(e){
+    switch(e&&e.code){
+      case 'auth/invalid-phone-number':return 'رقم الهاتف غير صالح';
+      case 'auth/too-many-requests':return 'عدد المحاولات كبير، حاول مرة أخرى بعد قليل';
+      case 'auth/invalid-verification-code':return 'كود التحقق غير صحيح';
+      case 'auth/code-expired':return 'انتهت صلاحية الكود، اطلب كوداً جديداً';
+      case 'auth/captcha-check-failed':return 'فشل التحقق الأمني، أعد المحاولة';
+      case 'auth/network-request-failed':return 'تعذّر الاتصال بالإنترنت';
+      case 'auth/operation-not-allowed':return 'التحقق برقم الهاتف غير مفعّل في Firebase';
+      case 'auth/unauthorized-domain':return 'هذا النطاق غير مصرّح به في إعدادات Firebase';
+      case 'auth/billing-not-enabled':return 'إرسال الرسائل يتطلب تفعيل خطة Blaze في Firebase';
+      case 'auth/quota-exceeded':return 'تم تجاوز حد الرسائل المسموح به';
+      default:return 'تعذّر إتمام التحقق، حاول مرة أخرى';
+    }
+  }
+  async function sendOtp(){
+    const fb=window.firebaseAuth;
+    if(!fb){setParentErr('خدمة التحقق غير جاهزة، تأكد من الاتصال بالإنترنت وأعد المحاولة');return;}
+    const full=toE164(phone,countryCode);
+    setOtpBusy(true);setParentErr('');
+    try{
+      clearVerifier();
+      verifierRef.current=new fb.RecaptchaVerifier(fb.auth,'recaptcha-container',{size:'invisible'});
+      const conf=await fb.signInWithPhoneNumber(fb.auth,full,verifierRef.current);
+      confirmRef.current=conf;
+      setSentTo(full);setOtp('');setOtpStep(true);setResendIn(60);
+    }catch(e){
+      console.error('OTP send error',e);
+      clearVerifier();
+      setParentErr(otpErrMsg(e));
+    }
+    setOtpBusy(false);
+  }
+  async function verifyOtp(){
+    if(otp.length!==6){setParentErr('أدخل كود التحقق المكون من 6 أرقام');return;}
+    if(!confirmRef.current){setParentErr('اطلب كود تحقق جديد');return;}
+    setOtpBusy(true);setParentErr('');
+    try{
+      await confirmRef.current.confirm(otp);
+      try{await window.firebaseAuth.auth.signOut();}catch(e){}
+      const m=matchesRef.current||[];
+      resetOtp();
+      if(m.length===1)chooseChild(m[0]);else setParentChoices(m);
+    }catch(e){
+      console.error('OTP verify error',e);
+      setParentErr(otpErrMsg(e));
+    }
+    setOtpBusy(false);
+  }
 
   function login(){
     if(!user.trim()||!pass.trim()){setErr('أدخل اسم المستخدم وكلمة المرور');return;}
@@ -639,8 +805,8 @@ function LoginPage({data,setCurrentUser,setParentUser,lang,toggleLang}){
     if(!phone.trim()){setParentErr('أدخل رقم الهاتف');return;}
     const matches=matchStudentsByPhone(data.students,phone,countryCode);
     if(matches.length===0){setParentErr('لا يوجد طالب بهذا الرقم');return;}
-    if(matches.length===1){chooseChild(matches[0]);return;}
-    setParentChoices(matches);
+    matchesRef.current=matches;
+    sendOtp(); // verify ownership of the number by SMS before entering
   }
   function chooseChild(st){
     setParentUser({id:'parent-'+st.id,role:'parent',name:'ولي أمر: '+st.name,studentId:st.id,phone,countryCode});
@@ -704,15 +870,45 @@ function LoginPage({data,setCurrentUser,setParentUser,lang,toggleLang}){
           <span style={{color:'var(--primary)',fontWeight:800}}>←</span>
         </div>)}
         <div style={{textAlign:'center',marginTop:6}}>
-          <button onClick={()=>setParentChoices(null)} style={{background:'none',border:'none',color:'var(--gray)',fontSize:13,cursor:'pointer',fontFamily:'Cairo,sans-serif',fontWeight:700}}>
+          <button onClick={()=>{setParentChoices(null);resetOtp();}} style={{background:'none',border:'none',color:'var(--gray)',fontSize:13,cursor:'pointer',fontFamily:'Cairo,sans-serif',fontWeight:700}}>
             ← رجوع
+          </button>
+        </div>
+      </div>:otpStep?<div>
+        <div style={{textAlign:'center',marginBottom:16}}>
+          <div style={{fontSize:36,marginBottom:6}}>📱</div>
+          <div style={{fontWeight:800,fontSize:15,color:'var(--primary)'}}>تأكيد رقم الهاتف</div>
+          <div style={{fontSize:12.5,color:'var(--gray)',marginTop:4}}>تم إرسال كود التحقق برسالة نصية إلى</div>
+          <div dir="ltr" style={{fontWeight:800,fontSize:14,color:'var(--text)',marginTop:2}}>{sentTo}</div>
+        </div>
+        {parentErr&&<div className="alert alert-danger">⚠️ {parentErr}</div>}
+        <div className="form-group">
+          <label className="form-label">كود التحقق</label>
+          <input className="form-control" dir="ltr" inputMode="numeric" autoComplete="one-time-code" maxLength={6}
+            value={otp} onChange={e=>{setOtp(e.target.value.replace(/[^0-9]/g,'').slice(0,6));setParentErr('');}}
+            placeholder="______" onKeyDown={e=>e.key==='Enter'&&verifyOtp()} autoFocus
+            style={{textAlign:'center',fontSize:22,fontWeight:800,letterSpacing:10}}/>
+        </div>
+        <button className="btn btn-primary" style={{width:'100%',padding:'13px',fontSize:15,marginBottom:12}} onClick={verifyOtp} disabled={otpBusy}>
+          {otpBusy?'⏳ جاري التحقق...':'✅ تأكيد ودخول'}
+        </button>
+        <div style={{textAlign:'center',marginBottom:8}}>
+          {resendIn>0
+            ?<span style={{fontSize:12.5,color:'var(--gray)',fontWeight:600}}>يمكنك إعادة إرسال الكود بعد {resendIn} ثانية</span>
+            :<button disabled={otpBusy} onClick={sendOtp} style={{background:'none',border:'none',color:'var(--primary)',fontSize:13,cursor:'pointer',fontFamily:'Cairo,sans-serif',fontWeight:700,textDecoration:'underline'}}>
+              🔄 إعادة إرسال الكود
+            </button>}
+        </div>
+        <div style={{textAlign:'center'}}>
+          <button onClick={()=>{resetOtp();setParentErr('');}} style={{background:'none',border:'none',color:'var(--gray)',fontSize:13,cursor:'pointer',fontFamily:'Cairo,sans-serif',fontWeight:700}}>
+            ← تغيير رقم الهاتف
           </button>
         </div>
       </div>:<div>
         <div style={{textAlign:'center',marginBottom:16}}>
           <div style={{fontSize:36,marginBottom:6}}>👪</div>
           <div style={{fontWeight:800,fontSize:15,color:'var(--primary)'}}>دخول ولي الأمر</div>
-          <div style={{fontSize:12.5,color:'var(--gray)',marginTop:4}}>أدخل رقم هاتف الطالب المسجل</div>
+          <div style={{fontSize:12.5,color:'var(--gray)',marginTop:4}}>أدخل رقم الهاتف المسجل لدى الأكاديمية وسنرسل لك كود تحقق برسالة نصية</div>
         </div>
         {parentErr&&<div className="alert alert-danger">⚠️ {parentErr}</div>}
         <div className="form-group">
@@ -729,8 +925,8 @@ function LoginPage({data,setCurrentUser,setParentUser,lang,toggleLang}){
               placeholder="01XXXXXXXXX" onKeyDown={e=>e.key==='Enter'&&parentLogin()} style={{flex:1}}/>
           </div>
         </div>
-        <button className="btn btn-primary" style={{width:'100%',padding:'13px',fontSize:15,marginBottom:12}} onClick={parentLogin}>
-          👪 دخول
+        <button className="btn btn-primary" style={{width:'100%',padding:'13px',fontSize:15,marginBottom:12}} onClick={parentLogin} disabled={otpBusy}>
+          {otpBusy?'⏳ جاري إرسال الكود...':'📩 إرسال كود التحقق'}
         </button>
         <div style={{textAlign:'center'}}>
           <button onClick={()=>{setShowParent(false);setParentErr('');setParentChoices(null);}} style={{background:'none',border:'none',color:'var(--gray)',fontSize:13,cursor:'pointer',fontFamily:'Cairo,sans-serif',fontWeight:700}}>
@@ -738,6 +934,7 @@ function LoginPage({data,setCurrentUser,setParentUser,lang,toggleLang}){
           </button>
         </div>
       </div>}
+      <div id="recaptcha-container"></div>
     </div>
   </div>;
 }
@@ -901,6 +1098,7 @@ function AdminPanel({data,setData,currentUser,setCurrentUser,lang,toggleLang}){
     ]},
     {title:lang==='ar'?'الطلاب':'Students',items:[
       {id:'students',icon:'🎓',label:T[lang].students},
+      {id:'prospects',icon:'🌱',label:lang==='ar'?'الطلبة المحتملين':'Prospective Students'},
       {id:'trials',icon:'🆓',label:lang==='ar'?'المحاضرة المجانية':'Free Trial'},
       {id:'attendance',icon:'✅',label:T[lang].attendance},
       {id:'payments',icon:'💰',label:T[lang].payments},
@@ -929,7 +1127,7 @@ function AdminPanel({data,setData,currentUser,setCurrentUser,lang,toggleLang}){
     return !data.payments.some(p=>p.studentId===s.id&&p.date?.startsWith(cm));
   }).length,[data]);
 
-  const sectionTitles={dashboard:'لوحة التحكم',students:'إدارة الطلاب',trials:'المحاضرة المجانية',attendance:'تسجيل الحضور',payments:'المدفوعات',instructors:'المحاضرون','inst-att':'حضور المحاضرين','inst-salary':'الرواتب والساعات','homework':'متابعة الواجبات',groups:'المجموعات',broadcast:'إرسال جماعي',tasks:'مهام المحاضرين',quizzes:'الاختبارات الدورية',backup:'تصدير / استيراد البيانات','parent-board':'لوحة أولياء الأمور'};
+  const sectionTitles={prospects:'الطلبة المحتملين',dashboard:'لوحة التحكم',students:'إدارة الطلاب',trials:'المحاضرة المجانية',attendance:'تسجيل الحضور',payments:'المدفوعات',instructors:'المحاضرون','inst-att':'حضور المحاضرين','inst-salary':'الرواتب والساعات','homework':'متابعة الواجبات',groups:'المجموعات',broadcast:'إرسال جماعي',tasks:'مهام المحاضرين',quizzes:'الاختبارات الدورية',backup:'تصدير / استيراد البيانات','parent-board':'لوحة أولياء الأمور'};
 
   return <div className="app">
     <aside className="sidebar">
@@ -964,7 +1162,7 @@ function AdminPanel({data,setData,currentUser,setCurrentUser,lang,toggleLang}){
       <div className="topbar">
         <div><div className="topbar-breadcrumb">لوحة التحكم</div><div className="topbar-title">{sectionTitles[section]}</div></div>
         <div className="topbar-actions">
-          <span style={{fontSize:12,color:'var(--gray)',fontWeight:600}}>{new Date().toLocaleDateString(lang==='ar'?'ar-EG':'en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'})}</span>
+          <span style={{fontSize:12,color:'var(--gray)',fontWeight:600}}>{new Date().toLocaleDateString(lang==='ar'?(document.documentElement.lang==='en'?'en-GB':'ar-EG'):'en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'})}</span>
           <NotificationsPanel notifications={notifications}/>
           <button onClick={toggleLang} className="btn btn-ghost btn-sm" style={{fontWeight:700}}>🌐 {T[lang].lang}</button>
           <button className="btn btn-danger btn-sm" onClick={()=>{if(confirm(lang==='ar'?'هل تريد تسجيل الخروج؟':'Logout?'))setCurrentUser(null);}}>{T[lang].logout}</button>
@@ -981,6 +1179,7 @@ function AdminPanel({data,setData,currentUser,setCurrentUser,lang,toggleLang}){
         {section==='inst-salary'&&<InstSalaryModule data={data} update={update} lang={lang}/>}
         {section==='homework'&&<HomeworkModule data={data} update={update} lang={lang}/>}
         {section==='broadcast'&&<BroadcastModule data={data} update={update} lang={lang}/>}
+        {section==='prospects'&&<ProspectsModule data={data} update={update} lang={lang}/>}
         {section==='trials'&&<TrialsModule data={data} update={update} lang={lang}/>}
         {section==='integrations'&&<IntegrationsModule data={data} update={update}/>}
         {section==='backup'&&<BackupModule data={data} setData={setData}/>}
@@ -1341,7 +1540,7 @@ function ParentBoardModule({data,update,lang='ar'}){
                 <span style={{fontSize:16}}>{st.icon}</span>
                 <div>
                   <div style={{fontWeight:800,fontSize:13}}>{a.title}</div>
-                  <div style={{fontSize:11,color:'var(--gray)'}}>إلى: {a.studentName} • {new Date(a.createdAt).toLocaleDateString('ar-EG')}</div>
+                  <div style={{fontSize:11,color:'var(--gray)'}}>إلى: {a.studentName} • {new Date(a.createdAt).toLocaleDateString((document.documentElement.lang==='en'?'en-GB':'ar-EG'))}</div>
                 </div>
               </div>
               <div style={{display:'flex',gap:6,alignItems:'center'}}>
@@ -1534,7 +1733,7 @@ function BackupModule({data,setData}){
       <div style={{display:'grid',gridTemplateColumns:'repeat(2,1fr)',gap:10}}>
         {stats.map(([k,v])=><div key={k} className="card-sm"><span style={{color:'var(--gray)',fontSize:12}}>{k}</span><span style={{fontWeight:800,fontSize:18,color:'var(--primary)',marginRight:8}}>{v}</span></div>)}
       </div>
-      <div style={{marginTop:12,fontSize:11,color:'var(--gray)'}}>آخر تحديث: {new Date().toLocaleString('ar-EG')}</div>
+      <div style={{marginTop:12,fontSize:11,color:'var(--gray)'}}>آخر تحديث: {new Date().toLocaleString((document.documentElement.lang==='en'?'en-GB':'ar-EG'))}</div>
     </div>
 
     <div className="card" style={{marginBottom:16}}>
@@ -1714,6 +1913,161 @@ function GradeFinalExamModal({show,onClose,student,currentGrade,nextGrade,onPass
 }
 
 // ─── STUDENTS MODULE ──────────────────────────────────────────────────────────
+// ─── PROSPECTS (طلبة محتملين) ────────────────────────────────────────────────
+function ProspectsModule({data,update,lang='ar'}){
+  const L=(a,e)=>lang==='ar'?a:e;
+  const courseNames=(data.courseNames&&data.courseNames.length>0)?data.courseNames:COURSES;
+  const list=data.prospects||[];
+  const blank={name:'',dob:'',course:courseNames[0]||'',mode:'online',phone:'',regDate:today()};
+  const [search,setSearch]=useState('');
+  const [fMode,setFMode]=useState('');
+  const [fCourse,setFCourse]=useState('');
+  const [form,setForm]=useState(null);       // add / edit
+  const [openId,setOpenId]=useState(null);   // prospect page
+  const [joinP,setJoinP]=useState(null);     // join → StudentForm
+  const [cDate,setCDate]=useState(today());
+  const [cNote,setCNote]=useState('');
+  const [cType,setCType]=useState('call');
+  const [err,setErr]=useState('');
+  const open=list.find(p=>p.id===openId);
+  const lastC=p=>[...(p.contacts||[])].sort((a,b)=>(b.date||'').localeCompare(a.date||''))[0];
+  const modeLbl=m=>m==='offline'?L('🏫 أوفلاين','🏫 Offline'):L('💻 أونلاين','💻 Online');
+  const typeLbl={call:L('📞 مكالمة','📞 Call'),whatsapp:L('💬 واتساب','💬 WhatsApp'),visit:L('🏫 زيارة','🏫 Visit'),other:L('📝 أخرى','📝 Other')};
+  const filtered=list.filter(p=>
+    (!search||(p.name||'').toLowerCase().includes(search.toLowerCase())||(p.phone||'').includes(search))
+    &&(!fMode||p.mode===fMode)&&(!fCourse||p.course===fCourse));
+
+  function saveForm(){
+    if(!form.name.trim()||!form.phone.trim()){setErr(L('الاسم ورقم التليفون مطلوبان','Name and phone are required'));return;}
+    if(form.id)update('prospects',list.map(p=>p.id===form.id?{...p,...form}:p));
+    else update('prospects',[...list,{...form,id:makeId(),contacts:[],createdAt:today()}]);
+    setForm(null);setErr('');
+  }
+  function addContact(){
+    if(!cNote.trim())return;
+    const c={id:makeId(),date:cDate||today(),type:cType,note:cNote.trim()};
+    update('prospects',list.map(p=>p.id===openId?{...p,contacts:[...(p.contacts||[]),c]}:p));
+    setCNote('');setCDate(today());
+  }
+  function delContact(cid){
+    update('prospects',list.map(p=>p.id===openId?{...p,contacts:(p.contacts||[]).filter(c=>c.id!==cid)}:p));
+  }
+  function delProspect(id){
+    if(!confirm(L('حذف هذا الطالب المحتمل؟','Delete this prospect?')))return;
+    update('prospects',list.filter(p=>p.id!==id));setOpenId(null);
+  }
+  // Join the academy: create the real student (+ login) and move out of prospects
+  function joinAcademy(f){
+    const sid=f.studentId||makeStudentId(data.students);
+    const pass=makePass(),uname=makeUsername(f.name);
+    const {prospectId,...rest}=f;
+    const src=list.find(p=>p.id===prospectId)||{};
+    const newSt={...rest,id:makeId(),studentId:sid,createdAt:today(),
+      studyMode:src.mode,prospectRegDate:src.regDate,prospectContacts:src.contacts||[]};
+    update('students',[...data.students,newSt]);
+    update('users',[...data.users,{id:makeId(),username:uname,password:pass,role:'student',name:f.name,phone:f.phone,studentId:newSt.id}]);
+    update('prospects',list.filter(p=>p.id!==prospectId));
+    setJoinP(null);setOpenId(null);
+    alert(L(`✅ تم الانضمام للأكاديمية وتم نقل الطالب لقائمة الطلاب المسجلين\nاسم المستخدم: ${uname}\nكلمة السر: ${pass}`,
+            `✅ Joined the academy and moved to registered students\nUsername: ${uname}\nPassword: ${pass}`));
+  }
+
+  return <div>
+    <div className="section-header">
+      <div className="section-title">🌱 {L('الطلبة المحتملين','Prospective Students')} ({list.length})</div>
+      <button className="btn btn-primary" onClick={()=>{setForm({...blank});setErr('');}}>➕ {L('إضافة طالب محتمل','Add prospect')}</button>
+    </div>
+    <div className="card" style={{marginBottom:16,display:'flex',gap:10,flexWrap:'wrap'}}>
+      <input className="form-control" style={{flex:'1 1 200px'}} placeholder={L('🔍 بحث بالاسم أو الرقم','🔍 Search name or phone')} value={search} onChange={e=>setSearch(e.target.value)}/>
+      <select className="form-control" style={{flex:'0 1 160px'}} value={fMode} onChange={e=>setFMode(e.target.value)}>
+        <option value="">{L('كل أنواع الدراسة','All study types')}</option><option value="online">{L('أونلاين','Online')}</option><option value="offline">{L('أوفلاين','Offline')}</option>
+      </select>
+      <select className="form-control" style={{flex:'0 1 160px'}} value={fCourse} onChange={e=>setFCourse(e.target.value)}>
+        <option value="">{L('كل الكورسات','All courses')}</option>{courseNames.map(c=><option key={c} value={c}>{c}</option>)}
+      </select>
+    </div>
+    <div className="card" style={{padding:0}}>
+      <div className="table-wrap"><table>
+        <thead><tr><th>{L('الاسم','Name')}</th><th>{L('الكورس','Course')}</th><th>{L('نوع الدراسة','Study type')}</th><th>{L('رقم التليفون','Phone')}</th><th>{L('تاريخ التسجيل','Registered')}</th><th>{L('آخر تواصل','Last contact')}</th><th></th></tr></thead>
+        <tbody>
+        {filtered.length===0&&<tr><td colSpan="7" style={{textAlign:'center',color:'var(--gray)',padding:30}}>{L('لا يوجد طلبة محتملين','No prospects yet')}</td></tr>}
+        {filtered.map(p=>{const lc=lastC(p);return <tr key={p.id}>
+          <td style={{fontWeight:700,cursor:'pointer',color:'var(--primary)'}} onClick={()=>setOpenId(p.id)}>{p.name}</td>
+          <td>{p.course}</td><td>{modeLbl(p.mode)}</td><td dir="ltr">{p.phone}</td><td>{formatDate(p.regDate)}</td>
+          <td>{lc?formatDate(lc.date):<span style={{color:'var(--danger)',fontSize:12}}>{L('لم يتم التواصل','No contact yet')}</span>}</td>
+          <td style={{whiteSpace:'nowrap'}}>
+            <button className="btn btn-outline btn-sm" onClick={()=>setOpenId(p.id)}>👁️ {L('الصفحة','Page')}</button>{' '}
+            <button className="btn btn-primary btn-sm" onClick={()=>setJoinP(p)}>✅ {L('انضم','Joined')}</button>
+          </td></tr>;})}
+        </tbody></table></div>
+    </div>
+
+    {/* Add / Edit */}
+    {form&&<Modal show onClose={()=>setForm(null)} title={form.id?L('تعديل بيانات','Edit prospect'):L('إضافة طالب محتمل','Add prospect')}>
+      {err&&<div className="alert alert-danger">⚠️ {err}</div>}
+      <Input label={L('الاسم','Name')} required value={form.name} onChange={e=>setForm({...form,name:e.target.value})}/>
+      <div className="form-row">
+        <Input label={L('تاريخ الميلاد','Date of birth')} type="date" value={form.dob} onChange={e=>setForm({...form,dob:e.target.value})}/>
+        <Input label={L('رقم التليفون','Phone')} required value={form.phone} onChange={e=>setForm({...form,phone:e.target.value})} placeholder="01XXXXXXXXX"/>
+      </div>
+      <div className="form-row">
+        <Select label={L('الكورس','Course')} value={form.course} onChange={e=>setForm({...form,course:e.target.value})}>{courseNames.map(c=><option key={c} value={c}>{c}</option>)}</Select>
+        <Select label={L('نوع الدراسة','Study type')} value={form.mode} onChange={e=>setForm({...form,mode:e.target.value})}>
+          <option value="online">{L('أونلاين','Online')}</option><option value="offline">{L('أوفلاين','Offline')}</option></Select>
+      </div>
+      <Input label={L('تاريخ التسجيل','Registration date')} type="date" value={form.regDate} onChange={e=>setForm({...form,regDate:e.target.value})}/>
+      <div style={{display:'flex',gap:10,justifyContent:'flex-end'}}>
+        <button className="btn btn-ghost" onClick={()=>setForm(null)}>{L('إلغاء','Cancel')}</button>
+        <button className="btn btn-primary" onClick={saveForm}>💾 {L('حفظ','Save')}</button>
+      </div>
+    </Modal>}
+
+    {/* Prospect page */}
+    {open&&<Modal show onClose={()=>setOpenId(null)} title={'🌱 '+open.name} size="modal-lg">
+      <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(180px,1fr))',gap:10,marginBottom:16}}>
+        {[[L('الكورس','Course'),open.course],[L('نوع الدراسة','Study type'),modeLbl(open.mode)],[L('رقم التليفون','Phone'),open.phone],
+          [L('تاريخ الميلاد','Date of birth'),open.dob?formatDate(open.dob)+(calcAge(open.dob)!=null?` (${calcAge(open.dob)} ${L('سنة','yrs')})`:''):'—'],
+          [L('تاريخ التسجيل','Registered'),formatDate(open.regDate)],
+          [L('آخر تواصل','Last contact'),lastC(open)?formatDate(lastC(open).date):L('لم يتم التواصل','No contact yet')]
+        ].map(([k,v],i)=><div key={i} className="card-sm"><div style={{fontSize:11.5,color:'var(--gray)',fontWeight:600}}>{k}</div><div style={{fontWeight:800,fontSize:14}} dir="auto">{v}</div></div>)}
+      </div>
+      <div style={{display:'flex',gap:8,flexWrap:'wrap',marginBottom:18}}>
+        <a className="btn btn-wa btn-sm" href={waLink(open.phone,'')} target="_blank" rel="noreferrer">💬 {L('واتساب','WhatsApp')}</a>
+        <button className="btn btn-outline btn-sm" onClick={()=>{setForm({...open});setErr('');}}>✏️ {L('تعديل','Edit')}</button>
+        <button className="btn btn-danger btn-sm" onClick={()=>delProspect(open.id)}>🗑️ {L('حذف','Delete')}</button>
+        <button className="btn btn-primary btn-sm" style={{marginInlineStart:'auto'}} onClick={()=>setJoinP(open)}>✅ {L('انضم للأكاديمية','Joined the academy')}</button>
+      </div>
+      <div className="section-title" style={{marginBottom:10}}>📞 {L('سجل التواصل','Contact log')} ({(open.contacts||[]).length})</div>
+      <div className="card-sm" style={{marginBottom:14,background:'var(--light-gray)'}}>
+        <div className="form-row">
+          <Input label={L('تاريخ التواصل','Contact date')} type="date" value={cDate} onChange={e=>setCDate(e.target.value)}/>
+          <Select label={L('وسيلة التواصل','Method')} value={cType} onChange={e=>setCType(e.target.value)}>
+            {Object.entries(typeLbl).map(([k,v])=><option key={k} value={k}>{v}</option>)}</Select>
+        </div>
+        <Textarea label={L('ماذا حدث في التواصل؟','What happened?')} value={cNote} onChange={e=>setCNote(e.target.value)} rows="2" placeholder={L('مثال: تم الاتصال وطلب ميعاد تجربة الأسبوع القادم','e.g. Called, asked for a trial next week')}/>
+        <button className="btn btn-orange btn-sm" onClick={addContact}>➕ {L('تسجيل تواصل','Log contact')}</button>
+      </div>
+      {(open.contacts||[]).length===0
+        ?<div style={{textAlign:'center',color:'var(--gray)',padding:16}}>{L('لا يوجد تواصل مسجل بعد','No contacts logged yet')}</div>
+        :[...(open.contacts||[])].sort((a,b)=>(b.date||'').localeCompare(a.date||'')).map(c=>
+          <div key={c.id} style={{padding:'10px 14px',borderRadius:10,border:'1.5px solid var(--border)',marginBottom:8,display:'flex',gap:10,alignItems:'flex-start'}}>
+            <div style={{flex:1,minWidth:0}}>
+              <div style={{fontSize:12,color:'var(--gray)',fontWeight:700}}>{formatDate(c.date)} • {typeLbl[c.type]||typeLbl.other}</div>
+              <div style={{fontSize:13.5,marginTop:3,whiteSpace:'pre-wrap'}} dir="auto">{c.note}</div>
+            </div>
+            <button className="btn btn-danger btn-sm btn-icon" onClick={()=>delContact(c.id)}>🗑️</button>
+          </div>)}
+    </Modal>}
+
+    {/* Join → registered students (choose group / level / fee) */}
+    {joinP&&<Modal show onClose={()=>setJoinP(null)} title={L('انضمام للأكاديمية: ','Join academy: ')+joinP.name} size="modal-lg">
+      <div className="alert alert-info" style={{marginBottom:12}}>ℹ️ {L('اختر المجموعة والمستوى والرسوم ثم احفظ — سينتقل الطالب تلقائياً إلى الطلاب المسجلين.','Choose the group, level and fee, then save — the student moves to registered students automatically.')}</div>
+      <StudentForm initial={{prospectId:joinP.id,name:joinP.name,dob:joinP.dob,course:joinP.course,phone:joinP.phone,startDate:today()}}
+        groups={data.groups} courseNames={courseNames} data={data} onSave={joinAcademy} onCancel={()=>setJoinP(null)}/>
+    </Modal>}
+  </div>;
+}
+
 function StudentsModule({data,update,lang='ar'}){
   const [search,setSearch]=useState('');
   const [showAdd,setShowAdd]=useState(false);
@@ -2017,7 +2371,7 @@ ${ratingNotes.length>0?`**تقييمات المحاضر:**\n${ratingNotes.map((n
     .meta{color:#6B7280;font-size:12px;margin-bottom:20px}
     @media print{button{display:none}}</style></head>
     <body><h1>🤖 تقرير AI — ${student.name}</h1>
-    <div class="meta">الكورس: ${student.course||'—'} | المستوى: ${student.grade||'—'} | تاريخ التقرير: ${new Date(r.generatedAt).toLocaleDateString('ar-EG')}</div>
+    <div class="meta">الكورس: ${student.course||'—'} | المستوى: ${student.grade||'—'} | تاريخ التقرير: ${new Date(r.generatedAt).toLocaleDateString((document.documentElement.lang==='en'?'en-GB':'ar-EG'))}</div>
     <pre>${r.report}</pre>
     <button onclick="window.print()" style="padding:10px 24px;background:#1D4ED8;color:white;border:none;border-radius:8px;cursor:pointer;font-size:14px">🖨️ طباعة</button>
     </body></html>`);
@@ -2059,7 +2413,7 @@ ${ratingNotes.length>0?`**تقييمات المحاضر:**\n${ratingNotes.map((n
     {savedReport&&!loading&&<div>
       <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:12}}>
         <div style={{fontSize:12,color:'var(--gray)'}}>
-          آخر تقرير: {new Date(savedReport.generatedAt).toLocaleDateString('ar-EG')} • {savedReport.model}
+          آخر تقرير: {new Date(savedReport.generatedAt).toLocaleDateString((document.documentElement.lang==='en'?'en-GB':'ar-EG'))} • {savedReport.model}
         </div>
         <button className="btn btn-ghost btn-sm" style={{fontSize:11}} onClick={generateReport}>🔄 تحديث</button>
       </div>
@@ -2454,7 +2808,7 @@ function PaymentsModule({data,update,currentUser}){
         <div style={{fontWeight:800}}>{alerts.length} طالب لم يدفع هذا الشهر (حضر 4+ محاضرات)</div>
         <div style={{fontSize:12,marginTop:4,display:'flex',flexWrap:'wrap',gap:8,marginTop:8}}>
           {alerts.map(s=><a key={s.id} className="btn btn-wa btn-sm"
-            href={waLink(s.phone,'مرحباً '+s.name+',\nنذكركم بسداد رسوم شهر '+new Date().toLocaleDateString('ar-EG',{month:'long',year:'numeric'})+' وقيمتها '+s.fee+' جنيه\nشكراً 🤖')}
+            href={waLink(s.phone,'مرحباً '+s.name+',\nنذكركم بسداد رسوم شهر '+new Date().toLocaleDateString((document.documentElement.lang==='en'?'en-GB':'ar-EG'),{month:'long',year:'numeric'})+' وقيمتها '+s.fee+' جنيه\nشكراً 🤖')}
             target="_blank" rel="noreferrer">💬 {s.name}</a>)}
         </div>
       </div>
@@ -3702,7 +4056,7 @@ function InstructorHomeworkTab({data,update,myStudents,myInst,lang='ar'}){
                   <div>
                     <div style={{fontWeight:800,fontSize:13}}>{selStudent.name} — محاضرة {q.lectureNum}</div>
                     <div style={{fontSize:11,color:'var(--gray)',marginTop:2}}>
-                      {q.submittedAt?new Date(q.submittedAt).toLocaleString('ar-EG'):''}
+                      {q.submittedAt?new Date(q.submittedAt).toLocaleString((document.documentElement.lang==='en'?'en-GB':'ar-EG')):''}
                       {q.autoSubmitted?' • ⏱️ تلقائي':''}
                       {' • '+(q.total||0)+' سؤال'}
                     </div>
@@ -3793,7 +4147,7 @@ function InstructorHomeworkTab({data,update,myStudents,myInst,lang='ar'}){
                   <div style={{fontSize:12,fontWeight:700}}>محاضرة {photo.lectureNum}</div>
                   {photo.caption&&<div style={{fontSize:11,color:'var(--gray)',marginTop:2}}>{photo.caption}</div>}
                   <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginTop:6}}>
-                    <span style={{fontSize:10,color:'var(--gray)'}}>{new Date(photo.uploadedAt).toLocaleDateString('ar-EG')}</span>
+                    <span style={{fontSize:10,color:'var(--gray)'}}>{new Date(photo.uploadedAt).toLocaleDateString((document.documentElement.lang==='en'?'en-GB':'ar-EG'))}</span>
                     <button className="btn btn-danger btn-sm btn-icon" style={{fontSize:10}} onClick={()=>deletePhoto(ck,photo.id)}>🗑️</button>
                   </div>
                 </div>
@@ -3853,7 +4207,7 @@ function InstructorHomeworkTab({data,update,myStudents,myInst,lang='ar'}){
                 <div>
                   <div style={{fontWeight:800,fontSize:13}}>{selStudent.name} — محاضرة {q.lectureNum}</div>
                   <div style={{fontSize:11,color:'var(--gray)',marginTop:2}}>
-                    {q.submittedAt?new Date(q.submittedAt).toLocaleString('ar-EG'):''}
+                    {q.submittedAt?new Date(q.submittedAt).toLocaleString((document.documentElement.lang==='en'?'en-GB':'ar-EG')):''}
                     {q.autoSubmitted?' • ⏱️ تلقائي':''}
                     {' • نتيجة: '+(q.score||0)+'/'+(q.total||0)}
                   </div>
@@ -3937,7 +4291,7 @@ function InstNotifTab({data,update,myInst}){
             <div style={{flex:1}}>
               <div style={{fontWeight:800,fontSize:14}}>{n.title}</div>
               <div style={{fontSize:11,color:'var(--gray)',marginTop:2}}>
-                {new Date(n.sentAt).toLocaleString('ar-EG')}
+                {new Date(n.sentAt).toLocaleString((document.documentElement.lang==='en'?'en-GB':'ar-EG'))}
                 {n.instructorId==='all'&&<span className="badge badge-primary" style={{fontSize:9,marginRight:6}}>للكل</span>}
               </div>
             </div>
@@ -4069,7 +4423,7 @@ function InstRatingTab({data,update,myStudents,myInst,lang='ar'}){
             <div style={{flex:1,minWidth:0}}>
               <div style={{fontWeight:700,fontSize:13}}>{s.name}</div>
               {r?<>
-                <div style={{fontSize:11,color:'var(--gray)'}}>{new Date(r.lastRatedAt).toLocaleDateString('ar-EG')}</div>
+                <div style={{fontSize:11,color:'var(--gray)'}}>{new Date(r.lastRatedAt).toLocaleDateString((document.documentElement.lang==='en'?'en-GB':'ar-EG'))}</div>
                 <div style={{fontSize:11.5,color:'var(--text)',marginTop:2,fontStyle:'italic'}}>{r.note?.slice(0,60)}{r.note?.length>60?'...':''}</div>
               </>:<div style={{fontSize:11,color:'var(--danger)',fontWeight:700}}>⚠️ لم يُقيَّم بعد</div>}
             </div>
@@ -4677,7 +5031,7 @@ function StudentPanel({data,setData,currentUser,setCurrentUser,lang='ar',toggleL
               {alreadyDone.teacherGrade!=null
                 ?<div style={{marginTop:10,padding:'10px 14px',background:'white',borderRadius:10,border:'1.5px solid #86EFAC'}}>
                   <div style={{fontWeight:800,fontSize:15,color:'var(--success)'}}>🎯 درجة المعلم: {alreadyDone.teacherGrade}/100</div>
-                  {alreadyDone.gradedBy&&<div style={{fontSize:11,color:'var(--gray)',marginTop:2}}>بواسطة: {alreadyDone.gradedBy} • {alreadyDone.gradedAt?new Date(alreadyDone.gradedAt).toLocaleDateString('ar-EG'):''}</div>}
+                  {alreadyDone.gradedBy&&<div style={{fontSize:11,color:'var(--gray)',marginTop:2}}>بواسطة: {alreadyDone.gradedBy} • {alreadyDone.gradedAt?new Date(alreadyDone.gradedAt).toLocaleDateString((document.documentElement.lang==='en'?'en-GB':'ar-EG')):''}</div>}
                   {alreadyDone.teacherNote&&<div style={{marginTop:8,padding:'8px 12px',background:'#FFF7ED',borderRadius:8,border:'1px solid #FED7AA',fontSize:13,color:'#92400E'}}>
                     💬 <strong>ملاحظة المعلم:</strong> {alreadyDone.teacherNote}
                   </div>}
@@ -4827,7 +5181,7 @@ function ParentBoardTab({data,update,myStudent}){
             <span style={{fontSize:22}}>{st.icon}</span>
             <div>
               <div style={{fontWeight:800,fontSize:14}}>{a.title}</div>
-              <div style={{fontSize:11,color:'var(--gray)'}}>{new Date(a.createdAt).toLocaleDateString('ar-EG')}</div>
+              <div style={{fontSize:11,color:'var(--gray)'}}>{new Date(a.createdAt).toLocaleDateString((document.documentElement.lang==='en'?'en-GB':'ar-EG'))}</div>
             </div>
           </div>
           <div style={{fontSize:13.5,lineHeight:1.7,whiteSpace:'pre-wrap'}}>{a.body}</div>
@@ -5528,7 +5882,7 @@ function exportInstReport(inst,month,data,calcGrpHours){
     const lateNote=a.lateMinutes>0?`<span style="color:#DC2626;font-size:11px">(تأخير ${a.lateMinutes} دقيقة)</span>`:'';
     return `<tr>
       <td style="padding:8px 12px;border-bottom:1px solid #E5E7EB;text-align:center">${idx+1}</td>
-      <td style="padding:8px 12px;border-bottom:1px solid #E5E7EB">${new Date(a.date).toLocaleDateString('ar-EG')}</td>
+      <td style="padding:8px 12px;border-bottom:1px solid #E5E7EB">${new Date(a.date).toLocaleDateString((document.documentElement.lang==='en'?'en-GB':'ar-EG'))}</td>
       <td style="padding:8px 12px;border-bottom:1px solid #E5E7EB">${grp?.name||'—'}</td>
       <td style="padding:8px 12px;border-bottom:1px solid #E5E7EB;text-align:center">محاضرة ${a.lectureNum}</td>
       <td style="padding:8px 12px;border-bottom:1px solid #E5E7EB;text-align:center">${timeLabel(grp?.timeStart)||grp?.time||'—'}</td>
@@ -5538,7 +5892,7 @@ function exportInstReport(inst,month,data,calcGrpHours){
   }).join('');
 
   const settledBadge=settled
-    ?`<span style="padding:4px 12px;border-radius:20px;font-size:12px;font-weight:700;background:#DCFCE7;color:#166534">✅ تم الصرف بتاريخ ${new Date(settled.paidAt).toLocaleDateString('ar-EG')}</span>`
+    ?`<span style="padding:4px 12px;border-radius:20px;font-size:12px;font-weight:700;background:#DCFCE7;color:#166534">✅ تم الصرف بتاريخ ${new Date(settled.paidAt).toLocaleDateString((document.documentElement.lang==='en'?'en-GB':'ar-EG'))}</span>`
     :`<span style="padding:4px 12px;border-radius:20px;font-size:12px;font-weight:700;background:#FEF3C7;color:#92400E">⏳ لم يتم الصرف بعد</span>`;
 
   const html=`<!DOCTYPE html>
@@ -5571,7 +5925,7 @@ function exportInstReport(inst,month,data,calcGrpHours){
     <div style="font-size:12px;color:#6B7280;margin-top:4px">كشف حساب محاضر</div>
   </div>
   <div style="text-align:left">
-    <div style="font-size:12px;color:#6B7280">تاريخ الطباعة: ${new Date().toLocaleDateString('ar-EG')}</div>
+    <div style="font-size:12px;color:#6B7280">تاريخ الطباعة: ${new Date().toLocaleDateString((document.documentElement.lang==='en'?'en-GB':'ar-EG'))}</div>
     <div style="margin-top:8px">${settledBadge}</div>
   </div>
 </div>
@@ -5705,7 +6059,7 @@ function InstSalaryModule({data,update,lang='ar'}){
           const mHours=data.instructors.reduce((s,i)=>s+data.instAttendance.filter(a=>a.instructorId===i.id&&a.date?.startsWith(m)).reduce((ss,a)=>ss+calcGrpHours(data.groups.find(g=>g.id===a.groupId)),0),0);
           const isSelected=filterMonth===m;
           const d=new Date(m+'-01');
-          const label=d.toLocaleDateString('ar-EG',{month:'short',year:'2-digit'});
+          const label=d.toLocaleDateString((document.documentElement.lang==='en'?'en-GB':'ar-EG'),{month:'short',year:'2-digit'});
           return <button key={m} onClick={()=>setFilterMonth(m)}
             style={{padding:'8px 12px',borderRadius:9,border:`2px solid ${isSelected?'var(--primary)':'var(--border)'}`,
               background:isSelected?'var(--primary)':'white',color:isSelected?'white':'var(--text)',
@@ -5775,7 +6129,7 @@ function InstSalaryModule({data,update,lang='ar'}){
               <td>{settled
                 ?<div style={{textAlign:'center'}}>
                   <span className="badge badge-success" style={{fontSize:10}}>✅ تم</span>
-                  <div style={{fontSize:10,color:'var(--gray)'}}>{new Date(settled.paidAt).toLocaleDateString('ar-EG')}</div>
+                  <div style={{fontSize:10,color:'var(--gray)'}}>{new Date(settled.paidAt).toLocaleDateString((document.documentElement.lang==='en'?'en-GB':'ar-EG'))}</div>
                 </div>
                 :<button className="btn btn-primary btn-sm" style={{fontSize:11}}
                   onClick={()=>{if(!confirm(`تأكيد تصفية راتب ${i.name} لشهر ${filterMonth}؟\nالمبلغ: ${ms.salary} جنيه`))return;
@@ -6237,7 +6591,7 @@ function HomeworkModule({data,update,lang='ar'}){
                   <div style={{padding:'8px 10px',background:'white'}}>
                     {photo.caption&&<div style={{fontSize:12,fontWeight:700,marginBottom:3}}>{photo.caption}</div>}
                     <div style={{fontSize:11,color:'var(--gray)'}}>📷 {photo.uploadedBy}</div>
-                    <div style={{fontSize:10,color:'var(--gray)'}}>{new Date(photo.uploadedAt).toLocaleDateString('ar-EG')}</div>
+                    <div style={{fontSize:10,color:'var(--gray)'}}>{new Date(photo.uploadedAt).toLocaleDateString((document.documentElement.lang==='en'?'en-GB':'ar-EG'))}</div>
                     <div style={{display:'flex',gap:6,marginTop:6,flexWrap:'wrap'}}>
                       <button className="btn btn-ghost btn-sm" style={{fontSize:10}} onClick={()=>{
                         // Share to parent board
@@ -6318,7 +6672,7 @@ function HomeworkModule({data,update,lang='ar'}){
                   <div style={{display:'flex',justifyContent:'space-between',alignItems:'center'}}>
                     <div>
                       <div style={{fontSize:12,fontWeight:700}}>محاضرة {q.lectureNum} — النتيجة: {q.score}/{q.total}</div>
-                      <div style={{fontSize:11,color:'var(--gray)'}}>{q.submittedAt?new Date(q.submittedAt).toLocaleDateString('ar-EG'):''}</div>
+                      <div style={{fontSize:11,color:'var(--gray)'}}>{q.submittedAt?new Date(q.submittedAt).toLocaleDateString((document.documentElement.lang==='en'?'en-GB':'ar-EG')):''}</div>
                     </div>
                     <div style={{display:'flex',gap:4,alignItems:'center'}}>
                       {q.teacherGrade!=null?
@@ -6496,7 +6850,7 @@ function InstructorNotificationsModule({data,update}){
                 <span style={{fontSize:18}}>{st.icon}</span>
                 <div>
                   <div style={{fontWeight:800,fontSize:13}}>{n.title}</div>
-                  <div style={{fontSize:11,color:'var(--gray)'}}>إلى: {n.instructorName} • {new Date(n.sentAt).toLocaleDateString('ar-EG')}</div>
+                  <div style={{fontSize:11,color:'var(--gray)'}}>إلى: {n.instructorName} • {new Date(n.sentAt).toLocaleDateString((document.documentElement.lang==='en'?'en-GB':'ar-EG'))}</div>
                 </div>
               </div>
               <button className="btn btn-danger btn-sm btn-icon" style={{fontSize:10,flexShrink:0}} onClick={()=>delNotif(n.id)}>🗑️</button>
@@ -7210,7 +7564,7 @@ function PaymentEditRequestsModule({data,update,currentUser}){
       {pending.map(r=><div key={r.id} style={{padding:'14px 16px',borderRadius:12,border:'2px solid var(--orange)',background:'var(--orange-light)',marginBottom:12}}>
         <div style={{display:'flex',justifyContent:'space-between',flexWrap:'wrap',gap:8,marginBottom:8}}>
           <div style={{fontWeight:900,fontSize:14}}>{r.type==='delete'?'🗑️ طلب حذف':'✏️ طلب تعديل'} الإيصال رقم <span className="badge badge-primary">{r.receiptNum}</span></div>
-          <div style={{fontSize:12,color:'var(--gray)'}}>من: {r.requestedBy} • {new Date(r.createdAt).toLocaleString('ar-EG')}</div>
+          <div style={{fontSize:12,color:'var(--gray)'}}>من: {r.requestedBy} • {new Date(r.createdAt).toLocaleString((document.documentElement.lang==='en'?'en-GB':'ar-EG'))}</div>
         </div>
         <div style={{fontSize:13,marginBottom:6}}>👤 الطالب: <strong>{r.studentName}</strong></div>
         <div style={{background:'white',borderRadius:9,padding:'10px 12px',marginBottom:8}}>
@@ -7735,7 +8089,7 @@ function App(){
       const merged = {...prev, ...firebaseData};
 
       [
-        'trials','parentNotes','ratings','quizzes','instTasks',
+        'trials','prospects','parentNotes','ratings','quizzes','instTasks',
         'instFilesList','students','instructors','groups',
         'attendance','instAttendance','payments'
       ].forEach(k=>{
@@ -7760,6 +8114,7 @@ function App(){
   });
 
 
+  React.useEffect(()=>{window.__setLang&&window.__setLang(lang);},[lang]);
   function toggleLang(){const nl=lang==='ar'?'en':'ar';localStorage.setItem('robotico_lang',nl);setLang(nl);}
   function doLogin(u){
     // Block suspended/inactive users
@@ -7836,6 +8191,16 @@ ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
     setDoc,
     onSnapshot
   };
+
+  // Phone authentication (SMS verification for the parent portal)
+  import("https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js")
+    .then(({ getAuth, RecaptchaVerifier, signInWithPhoneNumber }) => {
+      const auth = getAuth(app);
+      auth.languageCode = "ar";
+      window.firebaseAuth = { auth, RecaptchaVerifier, signInWithPhoneNumber };
+      console.log("✅ Firebase Auth OK");
+    })
+    .catch(err => console.error("❌ Firebase Auth load error:", err));
 
   console.log("✅ Firebase OK");
 </script>
